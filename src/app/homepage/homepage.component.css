@@ -1,0 +1,138 @@
+#container {
+    height: 100rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#main-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    /* height: 87%;
+    position: relative; */
+    /*background-image: url("../../assets/images/1876.jpg");
+    background-position: 0 -5.9rem;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    /* overflow: hidden; */
+}
+
+.content {
+    height: 100rem;
+    background-color: #130d0a;
+    position: absolute;
+    width: 100%;
+    top: 37rem;
+}
+
+.layer {
+    position: absolute;
+    background-position: 0 -5.9rem;
+    background-size: 100rem;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 96rem;
+}
+
+#layer_1 {
+    background-color: rgba(191, 105, 145, 0.83);
+    background-size: 112.2%;
+    width: 100%;
+    /* height: 50rem; */
+    /* top: 70px; */
+    /* z-index: -5; */
+    background-image: url("../../assets/images/sky.png");
+}
+
+#layer_3 {
+    /* background-color: rgba(78, 81, 141, 0.83);
+    width: 95%;
+    height: 45rem; */
+    /*z-index: -4; */
+    background-image: url("../../assets/images/mountainsB_1.png");
+    height: 50rem;
+}
+
+#layer_4 {
+    /* background-color: rgba(242, 190, 95, 0.83);
+    width: 90%;
+    height: 40rem; */
+    background-image: url("../../assets/images/mountainsB_2.png");
+    height: 50rem;
+}
+
+#layer_5 {
+    /* background-color: rgba(242, 79, 64, 0.83);
+    width: 85%;
+    height: 35rem; */
+    background-image: url("../../assets/images/mountainsB_3.png");
+    height: 50rem;
+}
+
+#layer_6 {
+    /* background-color: rgba(242, 131, 120, 0.83);
+    width: 80%;
+    height: 30rem; */
+    background-image: url("../../assets/images/mountainsB_4.png");
+    height: 50rem;
+    /* z-index: -1; */
+}
+
+#cloud-1 {
+    position: absolute;
+    bottom: 0;
+}
+
+#cloud-2 {
+    position: absolute;
+    bottom: 0;
+    opacity: 0.5;
+}
+
+#rocket {
+    align-self: center;
+    max-width: 8rem;
+    margin-top: 30rem;
+    margin-bottom: 14rem;
+    margin-right: 14rem;
+}
+
+#principalCopy {
+    max-width: 60%;
+    float: left;
+    margin-left: 5rem;
+}
+
+#principalCopy>h4 {
+    color: #f29e38;
+}
+
+#principalCopy>h1,
+p {
+    color: white;
+}
+
+#principalCopy>p {
+    max-width: 29em;
+}
+
+.planet {
+    max-width: 10%;
+}
+
+.planets {
+    position: absolute;
+    z-index: 1000;
+    bottom: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.planets>div>h3 {
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: 1.8;
+}
