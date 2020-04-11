@@ -120,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "preloading"
+    }
+  },
+  "defaultProject": "preloading",
+  "cli": {
+    "analytics": "d1dfcee6-ae7d-4d95-a3b0-87e466b8b51d"
+  }
 }
