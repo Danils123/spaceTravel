@@ -1,11 +1,12 @@
     .logoWhite {
-        max-width: 5rem;
+        max-width: 4rem;
     }
     
     .navbar {
-        background-image: url("../../assets/images/skyMenu.png");
+        /* background-image: url("../../assets/images/skyMenu.png");
         background-position: 0px -5.9rem;
         background-size: 100.3rem;
         background-attachment: fixed;
-        background-repeat: no-repeat;
+        background-repeat: no-repeat; */
+        background-color: transparent;
     }

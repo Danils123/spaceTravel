@@ -5,11 +5,11 @@
 }
 
 #main-section {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-content: center;
     position: relative;
+    width: 100%;
     /* height: 87%;
     position: relative; */
     /*background-image: url("../../assets/images/1876.jpg");
@@ -19,15 +19,25 @@
     /* overflow: hidden; */
 }
 
+#logo {
+    width: 10rem;
+    margin-top: 13rem;
+}
+
+#titleLogo {
+    font-size: 5rem;
+    color: #e2b632;
+}
+
 .content {
     height: 100rem;
-    background-color: #130d0a;
+    background-color: #060126;
     position: absolute;
     width: 100%;
     top: 37rem;
 }
 
-.layer {
+.layerImage {
     position: absolute;
     background-position: 0 -5.9rem;
     background-size: 100rem;
@@ -81,58 +91,24 @@
     /* z-index: -1; */
 }
 
-#cloud-1 {
-    position: absolute;
-    bottom: 0;
-}
-
-#cloud-2 {
-    position: absolute;
-    bottom: 0;
-    opacity: 0.5;
-}
-
-#rocket {
-    align-self: center;
-    max-width: 8rem;
-    margin-top: 30rem;
-    margin-bottom: 14rem;
-    margin-right: 14rem;
-}
-
-#principalCopy {
-    max-width: 60%;
-    float: left;
-    margin-left: 5rem;
-}
-
-#principalCopy>h4 {
-    color: #f29e38;
-}
-
-#principalCopy>h1,
-p {
-    color: white;
-}
-
-#principalCopy>p {
-    max-width: 29em;
-}
-
-.planet {
-    max-width: 10%;
-}
-
-.planets {
-    position: absolute;
-    z-index: 1000;
-    bottom: 2rem;
-    display: flex;
-    justify-content: space-around;
-}
-
-.planets>div>h3 {
-    margin-bottom: 0;
-    margin-top: 0;
-    line-height: 1.8;
+@media only screen and (max-device-width: 414px) {
+    .layerImage {
+        position: absolute;
+        background-position: 0px 20.0rem;
+        background-size: 38rem;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 96rem;
+    }
+    #layer_1 {
+        background-color: rgba(191, 105, 145, 0.83);
+        background-size: 394.2%;
+        width: 100%;
+        background-image: url("../../assets/images/sky.png");
+        background-position: -446px 0rem;
+    }
+    #logo {
+        margin-top: 15rem;
+    }
 }

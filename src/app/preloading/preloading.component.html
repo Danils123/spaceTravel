@@ -1,15 +1,20 @@
-<div id="contenedor" class="animated pageOutUp delay-3s slow" [hidden]="isHide">
+<div id="contenedor" class="animated pageOutUp delay-4s slow" [hidden]="isHide">
     <div id="background">
         <div [class]="containerClases + ' d-flex flex-column align-content-center w-100 h-100'">
-            <img src="assets/images/logo.png" [class]="'img-fluid animated align-self-center ' + imageClases.join(' ')" alt="Responsive image" id="logo">
+            <div [class]="'animated align-self-center h-100 w-100 position-relative ' + imageClases.join(' ')" id="logo">
+                <img src="assets/images/circle.png" class="img-fluid logoImg" alt="Responsive image">
+                <img src="assets/images/rocketLogo.png" class="img-fluid logoImg" alt="Responsive image">
 
-            <div class="align-self-center mt-5 animated fadeInUp delay-1s" id="spinnerC">
-                <div class="lds-ring animated fadeOut delay-2s">
+            </div>
+
+            <div class="align-self-center mt-5 " id="spinnerC">
+                <!-- animated fadeInUp delay-1s -->
+                <!-- <div class="lds-ring animated fadeOut delay-2s">
                     <div></div>
                     <div></div>
                     <div></div>
                     <div></div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

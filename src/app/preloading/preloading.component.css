@@ -3,7 +3,8 @@
 }
 
 #contenedor {
-    background-color: rgb(247, 243, 243);
+    background-color: white;
+    /* background-color: rgb(247, 243, 243); */
     height: 100vh;
     position: fixed;
     top: 0;
@@ -14,8 +15,40 @@
 }
 
 #logo {
-    max-width: 20rem;
     justify-self: center;
+}
+
+.logoImg {
+    max-width: 15rem;
+    position: absolute;
+    left: 43%;
+    top: 30%;
+}
+
+.logoImg:nth-child(1) {
+    animation-delay: 3s;
+    -webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+    animation: spin 4s linear 1s infinite;
+}
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
 }
 
 .lds-ring {
@@ -166,5 +199,14 @@
             transform: translate3d(-7.8rem, -12.85rem, 0);
             max-width: 5rem;
         }
+    }
+}
+
+@media only screen and (max-device-width: 414px) {
+    .logoImg {
+        max-width: 15rem;
+        position: absolute;
+        left: 20%;
+        top: 3 0%;
     }
 }

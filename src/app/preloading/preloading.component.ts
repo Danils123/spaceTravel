@@ -14,13 +14,12 @@ export class PreloadingComponent implements OnInit {
 
   ngOnInit() {
     setTimeout(() => {
-      this.imageClases = ['fadeOut slow'];
-    }, 3000);
-
+      this.imageClases = ['fadeOut'];
+    }, 4000);
     setTimeout(() => {
-        this.plService.hideBrand();
-        this.isHide = true;
-    }, 5450);
+      this.plService.hideBrand();
+      this.isHide = true;
+  }, 5550);
   }
 
 }
