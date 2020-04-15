@@ -1,0 +1,146 @@
+[debug] [2020-04-15T15:36:33.833Z] ----------------------------------------------------------------------
+[debug] [2020-04-15T15:36:33.835Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\drami\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2020-04-15T15:36:33.836Z] CLI Version:   8.0.3
+[debug] [2020-04-15T15:36:33.836Z] Platform:      win32
+[debug] [2020-04-15T15:36:33.836Z] Node Version:  v10.16.0
+[debug] [2020-04-15T15:36:33.837Z] Time:          Wed Apr 15 2020 09:36:33 GMT-0600 (GMT-06:00)
+[debug] [2020-04-15T15:36:33.837Z] ----------------------------------------------------------------------
+[debug] [2020-04-15T15:36:33.837Z] 
+[debug] [2020-04-15T15:36:33.846Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-15T15:36:33.846Z] > authorizing via signed-in user
+[debug] [2020-04-15T15:36:33.846Z] [iam] checking project asterius-f1308 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2020-04-15T15:36:33.849Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/asterius-f1308:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2020-04-15T15:36:35.967Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 15 Apr 2020 15:36:35 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=641","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-15T15:36:35.969Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/asterius-f1308/serviceAccounts/asterius-f1308@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2020-04-15T15:36:38.194Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 15 Apr 2020 15:36:37 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'asterius-f1308'...
+[info] 
+[info] i  deploying functions
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] Running command: npm --prefix "$RESOURCE_DIR" run build
+[info] +  functions: Finished running predeploy script.
+[debug] [2020-04-15T15:36:57.303Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "tslint --project tsconfig.json",
+    "build": "tsc",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "8"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@types/cors": "^2.8.6",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "firebase-admin": "^8.9.0",
+    "firebase-functions": "^3.3.0",
+    "moment": "^2.24.0"
+  },
+  "devDependencies": {
+    "tslint": "^5.12.0",
+    "typescript": "^3.2.2",
+    "firebase-functions-test": "^0.1.6"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[debug] [2020-04-15T15:36:57.310Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/asterius-f1308/services/cloudfunctions.googleapis.com  
+ 
+[debug] [2020-04-15T15:36:57.311Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/asterius-f1308/services/runtimeconfig.googleapis.com  
+ 
+[debug] [2020-04-15T15:37:13.103Z] Error: getaddrinfo ENOTFOUND serviceusage.googleapis.com serviceusage.googleapis.com:443
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+[error] 
+[error] Error: Server Error. getaddrinfo ENOTFOUND serviceusage.googleapis.com serviceusage.googleapis.com:443
+[debug] [2020-04-15T15:38:31.583Z] ----------------------------------------------------------------------
+[debug] [2020-04-15T15:38:31.585Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\drami\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2020-04-15T15:38:31.585Z] CLI Version:   8.0.3
+[debug] [2020-04-15T15:38:31.585Z] Platform:      win32
+[debug] [2020-04-15T15:38:31.585Z] Node Version:  v10.16.0
+[debug] [2020-04-15T15:38:31.586Z] Time:          Wed Apr 15 2020 09:38:31 GMT-0600 (GMT-06:00)
+[debug] [2020-04-15T15:38:31.586Z] ----------------------------------------------------------------------
+[debug] [2020-04-15T15:38:31.586Z] 
+[debug] [2020-04-15T15:38:31.595Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-15T15:38:31.595Z] > authorizing via signed-in user
+[debug] [2020-04-15T15:38:31.596Z] [iam] checking project asterius-f1308 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2020-04-15T15:38:31.599Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/asterius-f1308:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2020-04-15T15:38:32.914Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 15 Apr 2020 15:38:31 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=639","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-15T15:38:32.915Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/asterius-f1308/serviceAccounts/asterius-f1308@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2020-04-15T15:38:34.409Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 15 Apr 2020 15:38:33 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'asterius-f1308'...
+[info] 
+[info] i  deploying functions
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
+[info] Running command: npm --prefix "$RESOURCE_DIR" run build
+[info] +  functions: Finished running predeploy script.
+[debug] [2020-04-15T15:38:44.404Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "lint": "tslint --project tsconfig.json",
+    "build": "tsc",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "8"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "@types/cors": "^2.8.6",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "firebase-admin": "^8.9.0",
+    "firebase-functions": "^3.3.0",
+    "moment": "^2.24.0"
+  },
+  "devDependencies": {
+    "tslint": "^5.12.0",
+    "typescript": "^3.2.2",
+    "firebase-functions-test": "^0.1.6"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[debug] [2020-04-15T15:38:44.411Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/asterius-f1308/services/cloudfunctions.googleapis.com  
+ 
+[debug] [2020-04-15T15:38:44.412Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/asterius-f1308/services/runtimeconfig.googleapis.com  
+ 
+[debug] [2020-04-15T15:38:46.892Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 15 Apr 2020 15:38:45 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-15T15:38:47.190Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 15 Apr 2020 15:38:45 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] +  functions: all necessary APIs are enabled
+[debug] [2020-04-15T15:38:47.192Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/asterius-f1308/adminSdkConfig  
+ 
+[debug] [2020-04-15T15:38:51.929Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 15 Apr 2020 15:38:51 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  functions: preparing functions directory for uploading...
+[debug] [2020-04-15T15:38:51.933Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/asterius-f1308/configs  
+ 
+[debug] [2020-04-15T15:38:53.606Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 15 Apr 2020 15:38:52 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  functions: packaged functions (36.32 KB) for uploading
+[debug] [2020-04-15T15:38:54.185Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/projects/asterius-f1308/locations/-/functions  
+ 
+[debug] [2020-04-15T15:38:55.276Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 15 Apr 2020 15:38:54 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-15T15:38:55.278Z] >>> HTTP REQUEST POST https://cloudfunctions.googleapis.com/v1/projects/asterius-f1308/locations/us-central1/functions:generateUploadUrl  
+ 
+[debug] [2020-04-15T15:38:56.306Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 15 Apr 2020 15:38:55 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-15T15:38:56.308Z] >>> HTTP REQUEST PUT https://storage.googleapis.com/gcf-upload-us-central1-fb8f61d2-31ee-493f-8cca-c35e1853c433/60fea51e-bff1-4c04-9b74-b8e2a5528600.zip?GoogleAccessId=service-884982863193@gcf-admin-robot.iam.gserviceaccount.com&Expires=1586966935&Signature=lpFmV0u4Vr0CIgVU5bW1Jun6x3gZmgAPi6JvdFbFU23Ia5ukZTtObKGIqlUFO%2B3obR21vWidGbKoqDWLPmdNHL5efjjAQqbY3oYkA2FONmVlva6tcG6jTDiKEHQZBMOZTl9Xipvq3Y384%2F%2BEuv7xhnhGdImK7U1uI619ZiHJdmSse%2BpKFf3gRfMotlkXdd%2FTD8HjfciyDYth631IzImkdtzelLqRQRFG65pWntRGV8Uf%2F%2BMOIGVIbRoBzfSadSIIaKfW%2B2OF2ZJFFkChZO7azDpNAubkHXn5Abd29z7JAz%2FBzGnrk4ElNbzTy3FwMHBtxzKWFhH4jmmKHKmQ6zAGEw%3D%3D  
+ <request body omitted>
+[warn] !  functions: Upload Error: Server Error. getaddrinfo ENOTFOUND storage.googleapis.com storage.googleapis.com:443
+[debug] [2020-04-15T15:39:08.304Z] Error: getaddrinfo ENOTFOUND storage.googleapis.com storage.googleapis.com:443
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
+[error] 
+[error] Error: Server Error. getaddrinfo ENOTFOUND storage.googleapis.com storage.googleapis.com:443

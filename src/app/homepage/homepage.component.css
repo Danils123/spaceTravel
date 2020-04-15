@@ -10,13 +10,6 @@
     align-content: center;
     position: relative;
     width: 100%;
-    /* height: 87%;
-    position: relative; */
-    /*background-image: url("../../assets/images/1876.jpg");
-    background-position: 0 -5.9rem;
-    background-repeat: no-repeat;
-    background-size: cover; */
-    /* overflow: hidden; */
 }
 
 #logo {
@@ -27,6 +20,7 @@
 #titleLogo {
     font-size: 5rem;
     color: #e2b632;
+    text-decoration: none;
 }
 
 .content {
@@ -48,6 +42,7 @@
 }
 
 #layer_1 {
+    cursor: pointer;
     background-color: rgba(191, 105, 145, 0.83);
     background-size: 112.2%;
     width: 100%;

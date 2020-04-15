@@ -7,11 +7,19 @@ import { PreLoadingService } from '../preloading/preLoading.service';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-
-  constructor(public plService: PreLoadingService) {}
+  public whiteLogoClases: string[] = ['fadeIn'];
+  public colorLogoClases: string[] = [];
   public hiddenBrand = true;
+  public nick = 'Anonimus';
+  constructor(public plService: PreLoadingService) {}
   ngOnInit(): void {
-    this.plService.getObservable().subscribe(resp => this.hiddenBrand = resp);
+    this.plService.getObservable().subscribe(resp => {
+      this.hiddenBrand = resp;
+      this.colorLogoClases = ['fadeOut', 'slow'];
+      this.whiteLogoClases = ['fadeIn', 'very slow'];
+    });
+
+    this.plService.getObservableNick().subscribe(nick => this.nick = nick);
   }
 
 }

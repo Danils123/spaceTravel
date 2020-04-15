@@ -1,4 +1,4 @@
-<div id="contenedor" class="animated pageOutUp delay-4s slow" [hidden]="isHide">
+<div id="contenedor" [class]="pageClases.join(' ')" [hidden]="isHide">
     <div id="background">
         <div [class]="containerClases + ' d-flex flex-column align-content-center w-100 h-100'">
             <div [class]="'animated align-self-center h-100 w-100 position-relative ' + imageClases.join(' ')" id="logo">
@@ -6,16 +6,10 @@
                 <img src="assets/images/rocketLogo.png" class="img-fluid logoImg" alt="Responsive image">
 
             </div>
-
-            <div class="align-self-center mt-5 " id="spinnerC">
-                <!-- animated fadeInUp delay-1s -->
-                <!-- <div class="lds-ring animated fadeOut delay-2s">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div> -->
-            </div>
+            <mat-form-field [style.fontSize]="'20px'" [class]="'d-flex flex-column container mb-5 text-center example-full-width animated ' + inputClases.join(' ')" (keyup.enter)="endingPreloading($event.target.value)">
+                <mat-label>Ingresa tu nick</mat-label>
+                <input matInput placeholder="Enter para continuar" autofocus [value]="value" [maxLength]="10">
+            </mat-form-field>
         </div>
     </div>
 </div>

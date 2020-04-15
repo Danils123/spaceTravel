@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PreLoadingService } from './preLoading.service';
+import { UsersService } from '../shared/services/users.service';
 
 @Component({
   selector: 'app-preloading',
@@ -8,18 +9,29 @@ import { PreLoadingService } from './preLoading.service';
 })
 export class PreloadingComponent implements OnInit {
   public imageClases: string[] = ['fadeInUp', 'slow'];
-  public containerClases = 'justify-content-center';
+  public inputClases: string[] = ['fadeIn', 'slow', 'delay-1s'];
+  public pageClases: string[] = [];
+  public containerClases = 'justify-co1ntent-center';
   public isHide = false;
-  constructor(public plService: PreLoadingService) { }
+  public value = '';
+  constructor(
+    public plService: PreLoadingService,
+    public uService: UsersService
+  ) { }
 
   ngOnInit() {
-    setTimeout(() => {
-      this.imageClases = ['fadeOut'];
-    }, 4000);
+  }
+
+  async endingPreloading(value: string): Promise<void> {
+    this.value = value ? value : 'Anonimus';
+    this.imageClases = ['fadeOut', 'slow'];
+    this.inputClases = ['fadeOut'];
+    this.pageClases = ['animated', 'pageOutUp', 'slow', 'delay-1s'];
+    this.plService.setNick(this.value);
+    await this.uService.createUser(this.value);
     setTimeout(() => {
       this.plService.hideBrand();
       this.isHide = true;
-  }, 5550);
+    }, 3000);
   }
-
 }
