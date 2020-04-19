@@ -3,35 +3,53 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PreloadingComponent } from './preloading/preloading.component';
-import { HomepageComponent } from './homepage/homepage.component';
-import { NavComponent } from './nav/nav.component';
+import { PreloadingComponent } from './components/preloading/preloading.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
+import { NavComponent } from './components/nav/nav.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatRippleModule, ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
 import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './components/login/login.component';
+
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { RouterModule, PreloadAllModules } from '@angular/router';
+import { MatError } from '@angular/material/form-field';
+import { AutofocusDirective } from './shared/directive/autofocus.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     PreloadingComponent,
     HomepageComponent,
-    NavComponent
+    NavComponent,
+    LoginComponent,
+    AutofocusDirective
   ],
   imports: [
+    ReactiveFormsModule,
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatInputModule,
     MatIconModule,
+    MatRippleModule,
+    MatButtonModule,
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

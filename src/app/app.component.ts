@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { PreLoadingService } from './preloading/preLoading.service';
 
 @Component({
   selector: 'app-root',

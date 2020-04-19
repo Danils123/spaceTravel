@@ -1,0 +1,136 @@
+#background {
+    height: 100vh;
+}
+
+h1,
+h4,
+p {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+#contenedor {
+    background-color: white;
+    /* background-color: rgb(247, 243, 243); */
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2000;
+}
+
+#logo {
+    justify-self: center;
+}
+
+.logoImg {
+    max-width: 15rem;
+    position: absolute;
+    left: 43%;
+    top: 30%;
+}
+
+.logoImg:nth-child(1) {
+    animation-delay: 3s;
+    -webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+    animation: spin 4s linear 1s infinite;
+}
+
+.h-90 {
+    height: 90%!important;
+}
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes pageOutUp {
+    from {
+        height: 100%;
+    }
+    to {
+        height: 0%;
+        display: none;
+    }
+}
+
+@keyframes pageOutUp {
+    from {
+        height: 100%;
+    }
+    to {
+        height: 0%;
+        display: none;
+    }
+}
+
+.pageOutUp {
+    -webkit-animation-name: pageOutUp;
+    animation-name: pageOutUp;
+}
+
+@-webkit-keyframes fadeOutCustom {
+    from {
+        max-width: 5.1rem;
+        opacity: 1;
+        margin-left: 0.9rem;
+        margin-top: 0.8rem;
+    }
+    to {
+        max-width: 5.1rem;
+        opacity: 0;
+        margin-left: 0.9rem;
+        margin-top: 0.8rem;
+    }
+}
+
+@keyframes fadeOutCustom {
+    from {
+        max-width: 5.1rem;
+        opacity: 1;
+        margin-left: 0.9rem;
+        margin-top: 0.8rem;
+    }
+    to {
+        max-width: 5.1rem;
+        opacity: 0;
+        margin-left: 0.9rem;
+        margin-top: 0.8rem;
+    }
+}
+
+.fadeOutCustom {
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-name: fadeOutCustom;
+    animation-name: fadeOutCustom;
+}
+
+@media only screen and (max-device-width: 414px) {
+    .logoImg {
+        max-width: 15rem;
+        position: absolute;
+        left: 20%;
+        top: 3 0%;
+    }
+    #logo {
+        margin-bottom: 15rem;
+    }
+}

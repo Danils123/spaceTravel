@@ -1,0 +1,13 @@
+<div id="contenedor" [class]="pageClases.join(' ')" [hidden]="isHide">
+    <div id="background">
+        <div [class]="containerClases + ' d-flex flex-column align-content-center w-100 h-90'">
+            <div [class]="'animated align-self-center h-100 w-100 position-relative ' + imageClases.join(' ')" id="logo">
+                <img src="assets/images/circle.png" class="img-fluid logoImg" alt="Responsive image">
+                <img src="assets/images/rocketLogo.png" class="img-fluid logoImg" alt="Responsive image">
+
+            </div>
+
+            <app-login (response)="endingPreloading($event)" [class]="'d-flex flex-column container mb-5 animated ' + inputClases.join(' ')"></app-login>
+        </div>
+    </div>
+</div>

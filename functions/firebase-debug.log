@@ -1,146 +1,659 @@
-[debug] [2020-04-15T15:36:33.833Z] ----------------------------------------------------------------------
-[debug] [2020-04-15T15:36:33.835Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\drami\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
-[debug] [2020-04-15T15:36:33.836Z] CLI Version:   8.0.3
-[debug] [2020-04-15T15:36:33.836Z] Platform:      win32
-[debug] [2020-04-15T15:36:33.836Z] Node Version:  v10.16.0
-[debug] [2020-04-15T15:36:33.837Z] Time:          Wed Apr 15 2020 09:36:33 GMT-0600 (GMT-06:00)
-[debug] [2020-04-15T15:36:33.837Z] ----------------------------------------------------------------------
-[debug] [2020-04-15T15:36:33.837Z] 
-[debug] [2020-04-15T15:36:33.846Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2020-04-15T15:36:33.846Z] > authorizing via signed-in user
-[debug] [2020-04-15T15:36:33.846Z] [iam] checking project asterius-f1308 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
-[debug] [2020-04-15T15:36:33.849Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/asterius-f1308:testIamPermissions  
- {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
-[debug] [2020-04-15T15:36:35.967Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 15 Apr 2020 15:36:35 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=641","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
-[debug] [2020-04-15T15:36:35.969Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/asterius-f1308/serviceAccounts/asterius-f1308@appspot.gserviceaccount.com:testIamPermissions  
- {"permissions":["iam.serviceAccounts.actAs"]}
-[debug] [2020-04-15T15:36:38.194Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 15 Apr 2020 15:36:37 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-15T22:57:11.524Z] ----------------------------------------------------------------------
+[debug] [2020-04-15T22:57:11.526Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\drami\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2020-04-15T22:57:11.527Z] CLI Version:   8.0.3
+[debug] [2020-04-15T22:57:11.527Z] Platform:      win32
+[debug] [2020-04-15T22:57:11.527Z] Node Version:  v10.16.0
+[debug] [2020-04-15T22:57:11.528Z] Time:          Wed Apr 15 2020 16:57:11 GMT-0600 (GMT-06:00)
+[debug] [2020-04-15T22:57:11.528Z] ----------------------------------------------------------------------
+[debug] [2020-04-15T22:57:11.528Z] 
+[debug] [2020-04-15T22:57:11.537Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-15T22:57:11.537Z] > authorizing via signed-in user
+[debug] [2020-04-15T22:57:11.537Z] [iam] checking project asterius-f1308 for permissions ["firebase.projects.get"]
+[debug] [2020-04-15T22:57:11.540Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/asterius-f1308:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-04-15T22:57:13.536Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 15 Apr 2020 22:57:13 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=694","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-15T22:57:13.538Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/asterius-f1308  
+ 
+[debug] [2020-04-15T22:57:14.271Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 15 Apr 2020 22:57:14 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
 [info] 
-[info] === Deploying to 'asterius-f1308'...
+[info] === Serving from 'D:\Angular\preloading'...
 [info] 
-[info] i  deploying functions
-[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
-[info] Running command: npm --prefix "$RESOURCE_DIR" run build
-[info] +  functions: Finished running predeploy script.
-[debug] [2020-04-15T15:36:57.303Z] > [functions] package.json contents: {
-  "name": "functions",
-  "scripts": {
-    "lint": "tslint --project tsconfig.json",
-    "build": "tsc",
-    "serve": "npm run build && firebase emulators:start --only functions",
-    "shell": "npm run build && firebase functions:shell",
-    "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
-  },
-  "engines": {
-    "node": "8"
-  },
-  "main": "lib/index.js",
-  "dependencies": {
-    "@types/cors": "^2.8.6",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "firebase-admin": "^8.9.0",
-    "firebase-functions": "^3.3.0",
-    "moment": "^2.24.0"
-  },
-  "devDependencies": {
-    "tslint": "^5.12.0",
-    "typescript": "^3.2.2",
-    "firebase-functions-test": "^0.1.6"
-  },
-  "private": true
-}
-[info] i  functions: ensuring necessary APIs are enabled...
-[debug] [2020-04-15T15:36:57.310Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/asterius-f1308/services/cloudfunctions.googleapis.com  
- 
-[debug] [2020-04-15T15:36:57.311Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/asterius-f1308/services/runtimeconfig.googleapis.com  
- 
-[debug] [2020-04-15T15:37:13.103Z] Error: getaddrinfo ENOTFOUND serviceusage.googleapis.com serviceusage.googleapis.com:443
-    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
-[error] 
-[error] Error: Server Error. getaddrinfo ENOTFOUND serviceusage.googleapis.com serviceusage.googleapis.com:443
-[debug] [2020-04-15T15:38:31.583Z] ----------------------------------------------------------------------
-[debug] [2020-04-15T15:38:31.585Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\drami\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
-[debug] [2020-04-15T15:38:31.585Z] CLI Version:   8.0.3
-[debug] [2020-04-15T15:38:31.585Z] Platform:      win32
-[debug] [2020-04-15T15:38:31.585Z] Node Version:  v10.16.0
-[debug] [2020-04-15T15:38:31.586Z] Time:          Wed Apr 15 2020 09:38:31 GMT-0600 (GMT-06:00)
-[debug] [2020-04-15T15:38:31.586Z] ----------------------------------------------------------------------
-[debug] [2020-04-15T15:38:31.586Z] 
-[debug] [2020-04-15T15:38:31.595Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2020-04-15T15:38:31.595Z] > authorizing via signed-in user
-[debug] [2020-04-15T15:38:31.596Z] [iam] checking project asterius-f1308 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
-[debug] [2020-04-15T15:38:31.599Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/asterius-f1308:testIamPermissions  
- {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
-[debug] [2020-04-15T15:38:32.914Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 15 Apr 2020 15:38:31 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=639","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
-[debug] [2020-04-15T15:38:32.915Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/asterius-f1308/serviceAccounts/asterius-f1308@appspot.gserviceaccount.com:testIamPermissions  
- {"permissions":["iam.serviceAccounts.actAs"]}
-[debug] [2020-04-15T15:38:34.409Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 15 Apr 2020 15:38:33 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
-[info] 
-[info] === Deploying to 'asterius-f1308'...
-[info] 
-[info] i  deploying functions
-[info] Running command: npm --prefix "$RESOURCE_DIR" run lint
-[info] Running command: npm --prefix "$RESOURCE_DIR" run build
-[info] +  functions: Finished running predeploy script.
-[debug] [2020-04-15T15:38:44.404Z] > [functions] package.json contents: {
-  "name": "functions",
-  "scripts": {
-    "lint": "tslint --project tsconfig.json",
-    "build": "tsc",
-    "serve": "npm run build && firebase emulators:start --only functions",
-    "shell": "npm run build && firebase functions:shell",
-    "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
-  },
-  "engines": {
-    "node": "8"
-  },
-  "main": "lib/index.js",
-  "dependencies": {
-    "@types/cors": "^2.8.6",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "firebase-admin": "^8.9.0",
-    "firebase-functions": "^3.3.0",
-    "moment": "^2.24.0"
-  },
-  "devDependencies": {
-    "tslint": "^5.12.0",
-    "typescript": "^3.2.2",
-    "firebase-functions-test": "^0.1.6"
-  },
-  "private": true
-}
-[info] i  functions: ensuring necessary APIs are enabled...
-[debug] [2020-04-15T15:38:44.411Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/asterius-f1308/services/cloudfunctions.googleapis.com  
- 
-[debug] [2020-04-15T15:38:44.412Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/asterius-f1308/services/runtimeconfig.googleapis.com  
- 
-[debug] [2020-04-15T15:38:46.892Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 15 Apr 2020 15:38:45 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
-[debug] [2020-04-15T15:38:47.190Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 15 Apr 2020 15:38:45 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
-[info] +  functions: all necessary APIs are enabled
-[debug] [2020-04-15T15:38:47.192Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/asterius-f1308/adminSdkConfig  
- 
-[debug] [2020-04-15T15:38:51.929Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 15 Apr 2020 15:38:51 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
-[info] i  functions: preparing functions directory for uploading...
-[debug] [2020-04-15T15:38:51.933Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/asterius-f1308/configs  
- 
-[debug] [2020-04-15T15:38:53.606Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 15 Apr 2020 15:38:52 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
-[info] i  functions: packaged functions (36.32 KB) for uploading
-[debug] [2020-04-15T15:38:54.185Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/projects/asterius-f1308/locations/-/functions  
- 
-[debug] [2020-04-15T15:38:55.276Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 15 Apr 2020 15:38:54 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
-[debug] [2020-04-15T15:38:55.278Z] >>> HTTP REQUEST POST https://cloudfunctions.googleapis.com/v1/projects/asterius-f1308/locations/us-central1/functions:generateUploadUrl  
- 
-[debug] [2020-04-15T15:38:56.306Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 15 Apr 2020 15:38:55 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
-[debug] [2020-04-15T15:38:56.308Z] >>> HTTP REQUEST PUT https://storage.googleapis.com/gcf-upload-us-central1-fb8f61d2-31ee-493f-8cca-c35e1853c433/60fea51e-bff1-4c04-9b74-b8e2a5528600.zip?GoogleAccessId=service-884982863193@gcf-admin-robot.iam.gserviceaccount.com&Expires=1586966935&Signature=lpFmV0u4Vr0CIgVU5bW1Jun6x3gZmgAPi6JvdFbFU23Ia5ukZTtObKGIqlUFO%2B3obR21vWidGbKoqDWLPmdNHL5efjjAQqbY3oYkA2FONmVlva6tcG6jTDiKEHQZBMOZTl9Xipvq3Y384%2F%2BEuv7xhnhGdImK7U1uI619ZiHJdmSse%2BpKFf3gRfMotlkXdd%2FTD8HjfciyDYth631IzImkdtzelLqRQRFG65pWntRGV8Uf%2F%2BMOIGVIbRoBzfSadSIIaKfW%2B2OF2ZJFFkChZO7azDpNAubkHXn5Abd29z7JAz%2FBzGnrk4ElNbzTy3FwMHBtxzKWFhH4jmmKHKmQ6zAGEw%3D%3D  
+[warn] !  Your requested "node" version "8" doesn't match your global version "10"
+[info] +  functions: functions emulator started at http://localhost:5000
+[info] i  functions: Watching "D:\Angular\preloading\functions" for Cloud Functions...
+[debug] [2020-04-15T22:57:16.330Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-04-15T22:57:16.331Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
+[debug] [2020-04-15T22:57:16.332Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-04-15T22:57:16.332Z] [worker-~diagnostic~-e8f3373e-1990-4b04-8ee3-009b9d01025a]: Assigning socketPath: \\?\pipe\D:\Angular\preloading\functions\15156 
+[debug] [2020-04-15T22:57:16.333Z] [worker-~diagnostic~-e8f3373e-1990-4b04-8ee3-009b9d01025a]: BUSY 
+[debug] [2020-04-15T22:57:16.861Z] [runtime-status] [15156] Functions runtime initialized. {"cwd":"D:\\Angular\\preloading\\functions","node_version":"10.16.0"} 
+[debug] [2020-04-15T22:57:16.862Z] [runtime-status] [15156] Disabled runtime features: undefined 
+[debug] [2020-04-15T22:57:16.867Z] [runtime-status] [15156] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-04-15T22:57:16.868Z] [runtime-status] [15156] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-04-15T22:57:16.873Z] [runtime-status] [15156] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-04-15T22:57:16.924Z] [runtime-status] [15156] Checked functions.config() {"config":{}} 
+[debug] [2020-04-15T22:57:16.924Z] [runtime-status] [15156] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-04-15T22:57:16.925Z] [runtime-status] [15156] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-04-15T22:57:16.926Z] [runtime-status] [15156] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-04-15T22:57:16.926Z] [runtime-status] [15156] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.10.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-04-15T22:57:17.058Z] [runtime-status] [15156] initializeApp(DEFAULT) {"databaseURL":"https://asterius-f1308.firebaseio.com","storageBucket":"asterius-f1308.appspot.com","projectId":"asterius-f1308","credential":{"implicit":false,"projectId":"asterius-f1308","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDAP3Y/T+Oit1XF\n5uytEUKag0KeEOx02WAYTi6Z32aQ2zom6OLk8pseXmx2WdJy+doUL4k8vk2AQ2C8\nd6V8A/2LrS0vjbIylvkz35tNe7oj1iyE4fxUAutFFP7uetu0YkKZ+NekXFam2gwi\nDQDn1Pjvjxe4p2KePsoOD30ZmgEMfUPTzP7JufI+eVe0Pl1GNw2CQXxrg0wMITd5\nx5DFqKh3cLhH4HseZCOVBIThgaFyMg5rl6oUou8GUOILjZmnG+CnsBFcC1PxjCH1\ndPoUhChsSf24IWWKxISBlnUx0PcO2X0MP14JU2ZJZPJCyfvAobUvBVzClxS6EVZ4\nlLubQKcDAgMBAAECggEAEWVsuNFCLauIr8N0BTvQ8BRn8c+25eKfBx6uqYPapHRX\nWxqrIBaH94PfLV0hZaq66NAIYMkY+uid7KVTAdmGlvNmaa2Dw39/217Pjyper0wm\nc9EojnLugS4jh3GcnJe2TnfYY5TAzpEKlLDiim1DfWyls92JrKd34d/Vl9HPaHwW\nRHMXx/df990G0VPDZt1wR6070jy1TeXhs/Ml0jxGLXOKggoZRjry6puPErFTWsNT\n+aKUU+ST9jYydRg+bXOaWnFH1mOY1VfqN3i+BCCRlc3Xy9y1apg1wRhm5SF9+2Ju\ntVMBG9sZ2S+lAEu7UqKbqKNv3zd2P+25nPrbm0VZMQKBgQD3dwBi5zlLjy2kpdxh\norXHwYBo3lWA+70vTwvwf9EK5BZyexsGkyPkc7bulJRqBivolP+Jl4IcONOj5uIM\n5n3QUMp/7MplnPa0WkHl/NCHOcFsDppyrFL9Er2n2lz+L2MeCpNKuRQwYV2/O1g9\n67lrGJYaOSz7epY/dFTWIZER+wKBgQDG4OuuCqCn3mgPZDRHpQXSB3v1HLfSHg10\nT011BDVjG/28oWPh3BDmRDvx+m4SE/JJmOXUqmL6Mf3aq/xPDMOoN23D3nMj2MZQ\nLYasc705sYeBzbV1EIjLvX32gDOA1AxVFqKpGQMBDnR+CwY9vJeq+XqtaBprWdB3\njYDPWno4mQKBgQDEeHaWD34tvz89uXF/Eu+/6KFKoTrBbRyGsvuHtfMB8pTfz11l\nmuykNDrIsK4kf0HdJm67js5+GZ/uQSC3nUfGXF5pslX+1uAH0KEBN/dXZUNrxyxY\nXviEdJye539tT7Ih58OJT+f3gVYsvbEReFV98cc6iqpr/qfLOVEhsQS8gQKBgGqn\ncHzTgjjEUzX93POXEjoCfX2DuyjZqQl5Beb9LMxL1JV2T6Ruajmy2hr43FKhk8vY\nTVjxT0cxzBubJCIYjE0H/LuP7luJA0E4SQLuxsnL5Qm9kdSH23S32Hd7ZSNvlHWF\nQBJDMZM9d0epDd3J5+RvClU4gQKVFfEnV67brLPxAoGBALGYSwS7ecaw6Y3Z4CTg\nTz6D7aZsu6bD16szczkWlW49uNb5iKZpwlkTfJr9KbdmGM4x71jHvKfGCY+C7p7m\nVtn3cszs19OwywywK3KylSr+GsosJOJXg5Zeguk+SAfEHvDFyRXzAwM8sC9fWe1E\n35D8XMvfzl6/6g8JQ8IfXE8F\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-zkmo1@asterius-f1308.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[info] +  functions[api]: http function initialized (http://localhost:5000/asterius-f1308/us-central1/api).
+[debug] [2020-04-15T22:57:17.355Z] [worker-~diagnostic~-e8f3373e-1990-4b04-8ee3-009b9d01025a]: IDLE 
+[debug] [2020-04-15T22:57:27.444Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-15T22:57:27.444Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-15T22:57:27.445Z] Accepted request OPTIONS /asterius-f1308/us-central1/api/createUser?name=Daniel --> api
+[debug] [2020-04-15T22:57:27.451Z] [worker-pool] addWorker(api) 
+[debug] [2020-04-15T22:57:27.452Z] [worker-pool] Adding worker with key api, total=1 
+[debug] [2020-04-15T22:57:27.452Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-15T22:57:27.452Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: Assigning socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-15T22:57:27.452Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: BUSY 
+[debug] [2020-04-15T22:57:27.974Z] [runtime-status] [10492] Functions runtime initialized. {"cwd":"D:\\Angular\\preloading\\functions","node_version":"10.16.0"} 
+[debug] [2020-04-15T22:57:27.976Z] [runtime-status] [10492] Disabled runtime features: undefined 
+[debug] [2020-04-15T22:57:27.981Z] [runtime-status] [10492] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-04-15T22:57:27.982Z] [runtime-status] [10492] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-04-15T22:57:27.986Z] [runtime-status] [10492] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-04-15T22:57:28.039Z] [runtime-status] [10492] Checked functions.config() {"config":{}} 
+[debug] [2020-04-15T22:57:28.039Z] [runtime-status] [10492] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-04-15T22:57:28.040Z] [runtime-status] [10492] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-04-15T22:57:28.040Z] [runtime-status] [10492] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-04-15T22:57:28.041Z] [runtime-status] [10492] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.10.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-04-15T22:57:28.302Z] [runtime-status] [10492] initializeApp(DEFAULT) {"databaseURL":"https://asterius-f1308.firebaseio.com","storageBucket":"asterius-f1308.appspot.com","projectId":"asterius-f1308","credential":{"implicit":false,"projectId":"asterius-f1308","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDAP3Y/T+Oit1XF\n5uytEUKag0KeEOx02WAYTi6Z32aQ2zom6OLk8pseXmx2WdJy+doUL4k8vk2AQ2C8\nd6V8A/2LrS0vjbIylvkz35tNe7oj1iyE4fxUAutFFP7uetu0YkKZ+NekXFam2gwi\nDQDn1Pjvjxe4p2KePsoOD30ZmgEMfUPTzP7JufI+eVe0Pl1GNw2CQXxrg0wMITd5\nx5DFqKh3cLhH4HseZCOVBIThgaFyMg5rl6oUou8GUOILjZmnG+CnsBFcC1PxjCH1\ndPoUhChsSf24IWWKxISBlnUx0PcO2X0MP14JU2ZJZPJCyfvAobUvBVzClxS6EVZ4\nlLubQKcDAgMBAAECggEAEWVsuNFCLauIr8N0BTvQ8BRn8c+25eKfBx6uqYPapHRX\nWxqrIBaH94PfLV0hZaq66NAIYMkY+uid7KVTAdmGlvNmaa2Dw39/217Pjyper0wm\nc9EojnLugS4jh3GcnJe2TnfYY5TAzpEKlLDiim1DfWyls92JrKd34d/Vl9HPaHwW\nRHMXx/df990G0VPDZt1wR6070jy1TeXhs/Ml0jxGLXOKggoZRjry6puPErFTWsNT\n+aKUU+ST9jYydRg+bXOaWnFH1mOY1VfqN3i+BCCRlc3Xy9y1apg1wRhm5SF9+2Ju\ntVMBG9sZ2S+lAEu7UqKbqKNv3zd2P+25nPrbm0VZMQKBgQD3dwBi5zlLjy2kpdxh\norXHwYBo3lWA+70vTwvwf9EK5BZyexsGkyPkc7bulJRqBivolP+Jl4IcONOj5uIM\n5n3QUMp/7MplnPa0WkHl/NCHOcFsDppyrFL9Er2n2lz+L2MeCpNKuRQwYV2/O1g9\n67lrGJYaOSz7epY/dFTWIZER+wKBgQDG4OuuCqCn3mgPZDRHpQXSB3v1HLfSHg10\nT011BDVjG/28oWPh3BDmRDvx+m4SE/JJmOXUqmL6Mf3aq/xPDMOoN23D3nMj2MZQ\nLYasc705sYeBzbV1EIjLvX32gDOA1AxVFqKpGQMBDnR+CwY9vJeq+XqtaBprWdB3\njYDPWno4mQKBgQDEeHaWD34tvz89uXF/Eu+/6KFKoTrBbRyGsvuHtfMB8pTfz11l\nmuykNDrIsK4kf0HdJm67js5+GZ/uQSC3nUfGXF5pslX+1uAH0KEBN/dXZUNrxyxY\nXviEdJye539tT7Ih58OJT+f3gVYsvbEReFV98cc6iqpr/qfLOVEhsQS8gQKBgGqn\ncHzTgjjEUzX93POXEjoCfX2DuyjZqQl5Beb9LMxL1JV2T6Ruajmy2hr43FKhk8vY\nTVjxT0cxzBubJCIYjE0H/LuP7luJA0E4SQLuxsnL5Qm9kdSH23S32Hd7ZSNvlHWF\nQBJDMZM9d0epDd3J5+RvClU4gQKVFfEnV67brLPxAoGBALGYSwS7ecaw6Y3Z4CTg\nTz6D7aZsu6bD16szczkWlW49uNb5iKZpwlkTfJr9KbdmGM4x71jHvKfGCY+C7p7m\nVtn3cszs19OwywywK3KylSr+GsosJOJXg5Zeguk+SAfEHvDFyRXzAwM8sC9fWe1E\n35D8XMvfzl6/6g8JQ8IfXE8F\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-zkmo1@asterius-f1308.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-04-15T22:57:28.615Z] [runtime-status] [10492] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-15T22:57:28.616Z] [runtime-status] [10492] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-15T22:57:28.616Z] [runtime-status] [10492] Running api in mode HTTPS 
+[debug] [2020-04-15T22:57:28.620Z] [runtime-status] [10492] Attempting to listen to socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-15T22:57:28.625Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-15T22:57:28.640Z] [runtime-status] [10492] Ephemeral server handling OPTIONS request 
+[debug] [2020-04-15T22:57:28.648Z] [runtime-status] [10492] Ephemeral server survived. 
+[debug] [2020-04-15T22:57:28.650Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-04-15T22:57:28.650Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-04-15T22:57:28.650Z] Accepted request POST /asterius-f1308/us-central1/api/createUser?name=Daniel --> api
+[debug] [2020-04-15T22:57:28.655Z] [worker-pool] addWorker(api) 
+[debug] [2020-04-15T22:57:28.655Z] [worker-pool] Adding worker with key api, total=2 
+[debug] [2020-04-15T22:57:28.655Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-15T22:57:28.655Z] [worker-api-0ef039d7-4979-43b1-a9d2-b2e19b805e79]: Assigning socketPath: \\?\pipe\D:\Angular\preloading\functions\10008 
+[debug] [2020-04-15T22:57:28.655Z] [worker-api-0ef039d7-4979-43b1-a9d2-b2e19b805e79]: BUSY 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-15T22:57:28.657Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: IDLE 
+[debug] [2020-04-15T22:57:28.657Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-15T22:57:29.222Z] [runtime-status] [10008] Functions runtime initialized. {"cwd":"D:\\Angular\\preloading\\functions","node_version":"10.16.0"} 
+[debug] [2020-04-15T22:57:29.235Z] [runtime-status] [10008] Disabled runtime features: undefined 
+[debug] [2020-04-15T22:57:29.240Z] [runtime-status] [10008] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-04-15T22:57:29.245Z] [runtime-status] [10008] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-04-15T22:57:29.255Z] [runtime-status] [10008] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-04-15T22:57:29.353Z] [runtime-status] [10008] Checked functions.config() {"config":{}} 
+[debug] [2020-04-15T22:57:29.354Z] [runtime-status] [10008] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-04-15T22:57:29.355Z] [runtime-status] [10008] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-04-15T22:57:29.355Z] [runtime-status] [10008] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-04-15T22:57:29.355Z] [runtime-status] [10008] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.10.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-04-15T22:57:29.501Z] [runtime-status] [10008] initializeApp(DEFAULT) {"databaseURL":"https://asterius-f1308.firebaseio.com","storageBucket":"asterius-f1308.appspot.com","projectId":"asterius-f1308","credential":{"implicit":false,"projectId":"asterius-f1308","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDAP3Y/T+Oit1XF\n5uytEUKag0KeEOx02WAYTi6Z32aQ2zom6OLk8pseXmx2WdJy+doUL4k8vk2AQ2C8\nd6V8A/2LrS0vjbIylvkz35tNe7oj1iyE4fxUAutFFP7uetu0YkKZ+NekXFam2gwi\nDQDn1Pjvjxe4p2KePsoOD30ZmgEMfUPTzP7JufI+eVe0Pl1GNw2CQXxrg0wMITd5\nx5DFqKh3cLhH4HseZCOVBIThgaFyMg5rl6oUou8GUOILjZmnG+CnsBFcC1PxjCH1\ndPoUhChsSf24IWWKxISBlnUx0PcO2X0MP14JU2ZJZPJCyfvAobUvBVzClxS6EVZ4\nlLubQKcDAgMBAAECggEAEWVsuNFCLauIr8N0BTvQ8BRn8c+25eKfBx6uqYPapHRX\nWxqrIBaH94PfLV0hZaq66NAIYMkY+uid7KVTAdmGlvNmaa2Dw39/217Pjyper0wm\nc9EojnLugS4jh3GcnJe2TnfYY5TAzpEKlLDiim1DfWyls92JrKd34d/Vl9HPaHwW\nRHMXx/df990G0VPDZt1wR6070jy1TeXhs/Ml0jxGLXOKggoZRjry6puPErFTWsNT\n+aKUU+ST9jYydRg+bXOaWnFH1mOY1VfqN3i+BCCRlc3Xy9y1apg1wRhm5SF9+2Ju\ntVMBG9sZ2S+lAEu7UqKbqKNv3zd2P+25nPrbm0VZMQKBgQD3dwBi5zlLjy2kpdxh\norXHwYBo3lWA+70vTwvwf9EK5BZyexsGkyPkc7bulJRqBivolP+Jl4IcONOj5uIM\n5n3QUMp/7MplnPa0WkHl/NCHOcFsDppyrFL9Er2n2lz+L2MeCpNKuRQwYV2/O1g9\n67lrGJYaOSz7epY/dFTWIZER+wKBgQDG4OuuCqCn3mgPZDRHpQXSB3v1HLfSHg10\nT011BDVjG/28oWPh3BDmRDvx+m4SE/JJmOXUqmL6Mf3aq/xPDMOoN23D3nMj2MZQ\nLYasc705sYeBzbV1EIjLvX32gDOA1AxVFqKpGQMBDnR+CwY9vJeq+XqtaBprWdB3\njYDPWno4mQKBgQDEeHaWD34tvz89uXF/Eu+/6KFKoTrBbRyGsvuHtfMB8pTfz11l\nmuykNDrIsK4kf0HdJm67js5+GZ/uQSC3nUfGXF5pslX+1uAH0KEBN/dXZUNrxyxY\nXviEdJye539tT7Ih58OJT+f3gVYsvbEReFV98cc6iqpr/qfLOVEhsQS8gQKBgGqn\ncHzTgjjEUzX93POXEjoCfX2DuyjZqQl5Beb9LMxL1JV2T6Ruajmy2hr43FKhk8vY\nTVjxT0cxzBubJCIYjE0H/LuP7luJA0E4SQLuxsnL5Qm9kdSH23S32Hd7ZSNvlHWF\nQBJDMZM9d0epDd3J5+RvClU4gQKVFfEnV67brLPxAoGBALGYSwS7ecaw6Y3Z4CTg\nTz6D7aZsu6bD16szczkWlW49uNb5iKZpwlkTfJr9KbdmGM4x71jHvKfGCY+C7p7m\nVtn3cszs19OwywywK3KylSr+GsosJOJXg5Zeguk+SAfEHvDFyRXzAwM8sC9fWe1E\n35D8XMvfzl6/6g8JQ8IfXE8F\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-zkmo1@asterius-f1308.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-04-15T22:57:29.802Z] [runtime-status] [10008] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-15T22:57:29.803Z] [runtime-status] [10008] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-15T22:57:29.804Z] [runtime-status] [10008] Running api in mode HTTPS 
+[debug] [2020-04-15T22:57:29.807Z] [runtime-status] [10008] Attempting to listen to socketPath: \\?\pipe\D:\Angular\preloading\functions\10008 
+[debug] [2020-04-15T22:57:29.813Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-15T22:57:29.838Z] [runtime-status] [10008] Ephemeral server handling POST request 
+[debug] [2020-04-15T22:57:29.846Z] [runtime-status] [10008] Ephemeral server survived. 
+[warn] !  Google API requested!
+   - URL: "https://www.googleapis.com/oauth2/v4/token"
+   - Be careful, this may be a production service.
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-15T22:57:31.786Z] [worker-api-0ef039d7-4979-43b1-a9d2-b2e19b805e79]: IDLE 
+[debug] [2020-04-15T22:57:31.787Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] >  increment count user {"user":"increment count user"}
+[debug] [2020-04-15T23:51:57.251Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-15T23:51:57.254Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-15T23:51:57.254Z] Accepted request OPTIONS /asterius-f1308/us-central1/api/createUser?name=Juan --> api
+[debug] [2020-04-15T23:51:57.255Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-15T23:51:57.255Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: Assigning socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-15T23:51:57.256Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: BUSY 
+[debug] [2020-04-15T23:51:57.271Z] [runtime-status] [10492] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-15T23:51:57.274Z] [runtime-status] [10492] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-15T23:51:57.274Z] [runtime-status] [10492] Running api in mode HTTPS 
+[debug] [2020-04-15T23:51:57.279Z] [runtime-status] [10492] Attempting to listen to socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-15T23:51:57.287Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-15T23:51:57.293Z] [runtime-status] [10492] Ephemeral server handling OPTIONS request 
+[debug] [2020-04-15T23:51:57.297Z] [runtime-status] [10492] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-15T23:51:57.299Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: IDLE 
+[debug] [2020-04-15T23:51:57.299Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-04-15T23:51:57.300Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-15T23:51:57.301Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-15T23:51:57.301Z] Accepted request POST /asterius-f1308/us-central1/api/createUser?name=Juan --> api
+[debug] [2020-04-15T23:51:57.301Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-15T23:51:57.301Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: Assigning socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-15T23:51:57.301Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: BUSY 
+[debug] [2020-04-15T23:51:57.308Z] [runtime-status] [10492] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-15T23:51:57.309Z] [runtime-status] [10492] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-15T23:51:57.309Z] [runtime-status] [10492] Running api in mode HTTPS 
+[debug] [2020-04-15T23:51:57.310Z] [runtime-status] [10492] Attempting to listen to socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-15T23:51:57.310Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-15T23:51:57.340Z] [runtime-status] [10492] Ephemeral server handling POST request 
+[debug] [2020-04-15T23:51:57.344Z] [runtime-status] [10492] Ephemeral server survived. 
+[warn] !  Google API requested!
+   - URL: "https://www.googleapis.com/oauth2/v4/token"
+   - Be careful, this may be a production service.
+[info] i  functions: Finished "api" in ~3s
+[debug] [2020-04-15T23:52:00.931Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: IDLE 
+[debug] [2020-04-15T23:52:00.931Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] >  increment count user {"user":"increment count user"}
+[debug] [2020-04-15T23:54:17.697Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-15T23:54:17.697Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-15T23:54:17.697Z] Accepted request OPTIONS /asterius-f1308/us-central1/api/createUser?name=Carlos --> api
+[debug] [2020-04-15T23:54:17.698Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-15T23:54:17.698Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: Assigning socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-15T23:54:17.698Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: BUSY 
+[debug] [2020-04-15T23:54:17.698Z] [runtime-status] [10492] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-15T23:54:17.700Z] [runtime-status] [10492] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-15T23:54:17.700Z] [runtime-status] [10492] Running api in mode HTTPS 
+[debug] [2020-04-15T23:54:17.700Z] [runtime-status] [10492] Attempting to listen to socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-15T23:54:17.701Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-15T23:54:17.703Z] [runtime-status] [10492] Ephemeral server handling OPTIONS request 
+[debug] [2020-04-15T23:54:17.704Z] [runtime-status] [10492] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-15T23:54:17.705Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: IDLE 
+[debug] [2020-04-15T23:54:17.706Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-04-15T23:54:17.706Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-15T23:54:17.707Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-15T23:54:17.707Z] Accepted request POST /asterius-f1308/us-central1/api/createUser?name=Carlos --> api
+[debug] [2020-04-15T23:54:17.707Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-15T23:54:17.707Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: Assigning socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-15T23:54:17.707Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: BUSY 
+[debug] [2020-04-15T23:54:17.715Z] [runtime-status] [10492] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-15T23:54:17.717Z] [runtime-status] [10492] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-15T23:54:17.717Z] [runtime-status] [10492] Running api in mode HTTPS 
+[debug] [2020-04-15T23:54:17.717Z] [runtime-status] [10492] Attempting to listen to socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-15T23:54:17.718Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-15T23:54:17.721Z] [runtime-status] [10492] Ephemeral server handling POST request 
+[debug] [2020-04-15T23:54:17.721Z] [runtime-status] [10492] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-15T23:54:18.783Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: IDLE 
+[debug] [2020-04-15T23:54:18.783Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] >  increment count user {"user":"increment count user"}
+[debug] [2020-04-15T23:55:32.299Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-15T23:55:32.299Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-15T23:55:32.299Z] Accepted request OPTIONS /asterius-f1308/us-central1/api/createUser?name=Estens --> api
+[debug] [2020-04-15T23:55:32.299Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-15T23:55:32.299Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: Assigning socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-15T23:55:32.299Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: BUSY 
+[debug] [2020-04-15T23:55:32.300Z] [runtime-status] [10492] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-15T23:55:32.302Z] [runtime-status] [10492] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-15T23:55:32.302Z] [runtime-status] [10492] Running api in mode HTTPS 
+[debug] [2020-04-15T23:55:32.303Z] [runtime-status] [10492] Attempting to listen to socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-15T23:55:32.304Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-15T23:55:32.307Z] [runtime-status] [10492] Ephemeral server handling OPTIONS request 
+[debug] [2020-04-15T23:55:32.308Z] [runtime-status] [10492] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-15T23:55:32.309Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: IDLE 
+[debug] [2020-04-15T23:55:32.310Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-04-15T23:55:32.310Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-15T23:55:32.310Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-15T23:55:32.310Z] Accepted request POST /asterius-f1308/us-central1/api/createUser?name=Estens --> api
+[debug] [2020-04-15T23:55:32.311Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-15T23:55:32.311Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: Assigning socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-15T23:55:32.311Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: BUSY 
+[debug] [2020-04-15T23:55:32.319Z] [runtime-status] [10492] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-15T23:55:32.323Z] [runtime-status] [10492] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-15T23:55:32.323Z] [runtime-status] [10492] Running api in mode HTTPS 
+[debug] [2020-04-15T23:55:32.324Z] [runtime-status] [10492] Attempting to listen to socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-15T23:55:32.325Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-15T23:55:32.329Z] [runtime-status] [10492] Ephemeral server handling POST request 
+[debug] [2020-04-15T23:55:32.329Z] [runtime-status] [10492] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-15T23:55:33.300Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: IDLE 
+[debug] [2020-04-15T23:55:33.300Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] >  increment count user {"user":"increment count user"}
+[debug] [2020-04-15T23:55:51.314Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-15T23:55:51.314Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-15T23:55:51.314Z] Accepted request OPTIONS /asterius-f1308/us-central1/api/createUser?name=Peter --> api
+[debug] [2020-04-15T23:55:51.315Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-15T23:55:51.315Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: Assigning socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-15T23:55:51.315Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: BUSY 
+[debug] [2020-04-15T23:55:51.315Z] [runtime-status] [10492] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-15T23:55:51.317Z] [runtime-status] [10492] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-15T23:55:51.318Z] [runtime-status] [10492] Running api in mode HTTPS 
+[debug] [2020-04-15T23:55:51.318Z] [runtime-status] [10492] Attempting to listen to socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-15T23:55:51.320Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-15T23:55:51.323Z] [runtime-status] [10492] Ephemeral server handling OPTIONS request 
+[debug] [2020-04-15T23:55:51.324Z] [runtime-status] [10492] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-15T23:55:51.326Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: IDLE 
+[debug] [2020-04-15T23:55:51.326Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-04-15T23:55:51.327Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-15T23:55:51.327Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-15T23:55:51.327Z] Accepted request POST /asterius-f1308/us-central1/api/createUser?name=Peter --> api
+[debug] [2020-04-15T23:55:51.327Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-15T23:55:51.327Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: Assigning socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-15T23:55:51.327Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: BUSY 
+[debug] [2020-04-15T23:55:51.335Z] [runtime-status] [10492] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-15T23:55:51.338Z] [runtime-status] [10492] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-15T23:55:51.339Z] [runtime-status] [10492] Running api in mode HTTPS 
+[debug] [2020-04-15T23:55:51.339Z] [runtime-status] [10492] Attempting to listen to socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-15T23:55:51.341Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-15T23:55:51.344Z] [runtime-status] [10492] Ephemeral server handling POST request 
+[debug] [2020-04-15T23:55:51.344Z] [runtime-status] [10492] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-15T23:55:52.345Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: IDLE 
+[debug] [2020-04-15T23:55:52.345Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] >  increment count user {"user":"increment count user"}
+[debug] [2020-04-15T23:56:30.957Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-15T23:56:30.957Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-15T23:56:30.957Z] Accepted request OPTIONS /asterius-f1308/us-central1/api/createUser?name=Carlitos --> api
+[debug] [2020-04-15T23:56:30.958Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-15T23:56:30.958Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: Assigning socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-15T23:56:30.959Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: BUSY 
+[debug] [2020-04-15T23:56:30.959Z] [runtime-status] [10492] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-15T23:56:30.960Z] [runtime-status] [10492] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-15T23:56:30.961Z] [runtime-status] [10492] Running api in mode HTTPS 
+[debug] [2020-04-15T23:56:30.961Z] [runtime-status] [10492] Attempting to listen to socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-15T23:56:30.963Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-15T23:56:30.965Z] [runtime-status] [10492] Ephemeral server handling OPTIONS request 
+[debug] [2020-04-15T23:56:30.966Z] [runtime-status] [10492] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-15T23:56:30.968Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: IDLE 
+[debug] [2020-04-15T23:56:30.969Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-04-15T23:56:30.970Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-15T23:56:30.970Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-15T23:56:30.970Z] Accepted request POST /asterius-f1308/us-central1/api/createUser?name=Carlitos --> api
+[debug] [2020-04-15T23:56:30.970Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-15T23:56:30.970Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: Assigning socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-15T23:56:30.970Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: BUSY 
+[debug] [2020-04-15T23:56:30.976Z] [runtime-status] [10492] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-15T23:56:30.982Z] [runtime-status] [10492] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-15T23:56:30.982Z] [runtime-status] [10492] Running api in mode HTTPS 
+[debug] [2020-04-15T23:56:30.983Z] [runtime-status] [10492] Attempting to listen to socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-15T23:56:30.984Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-15T23:56:30.986Z] [runtime-status] [10492] Ephemeral server handling POST request 
+[debug] [2020-04-15T23:56:30.987Z] [runtime-status] [10492] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-15T23:56:32.005Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: IDLE 
+[debug] [2020-04-15T23:56:32.005Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] >  increment count user {"user":"increment count user"}
+[debug] [2020-04-15T23:57:34.396Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-15T23:57:34.396Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-15T23:57:34.396Z] Accepted request OPTIONS /asterius-f1308/us-central1/api/createUser?name=Pepe --> api
+[debug] [2020-04-15T23:57:34.396Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-15T23:57:34.396Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: Assigning socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-15T23:57:34.396Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: BUSY 
+[debug] [2020-04-15T23:57:34.397Z] [runtime-status] [10492] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-15T23:57:34.398Z] [runtime-status] [10492] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-15T23:57:34.398Z] [runtime-status] [10492] Running api in mode HTTPS 
+[debug] [2020-04-15T23:57:34.399Z] [runtime-status] [10492] Attempting to listen to socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-15T23:57:34.399Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-15T23:57:34.401Z] [runtime-status] [10492] Ephemeral server handling OPTIONS request 
+[debug] [2020-04-15T23:57:34.402Z] [runtime-status] [10492] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-15T23:57:34.406Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: IDLE 
+[debug] [2020-04-15T23:57:34.406Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-04-15T23:57:34.407Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-15T23:57:34.408Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-15T23:57:34.408Z] Accepted request POST /asterius-f1308/us-central1/api/createUser?name=Pepe --> api
+[debug] [2020-04-15T23:57:34.408Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-15T23:57:34.408Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: Assigning socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-15T23:57:34.408Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: BUSY 
+[debug] [2020-04-15T23:57:34.413Z] [runtime-status] [10492] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-15T23:57:34.414Z] [runtime-status] [10492] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-15T23:57:34.414Z] [runtime-status] [10492] Running api in mode HTTPS 
+[debug] [2020-04-15T23:57:34.415Z] [runtime-status] [10492] Attempting to listen to socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-15T23:57:34.416Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-15T23:57:34.419Z] [runtime-status] [10492] Ephemeral server handling POST request 
+[debug] [2020-04-15T23:57:34.419Z] [runtime-status] [10492] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-15T23:57:35.694Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: IDLE 
+[debug] [2020-04-15T23:57:35.694Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] >  increment count user {"user":"increment count user"}
+[debug] [2020-04-15T23:59:48.036Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-15T23:59:48.037Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-15T23:59:48.037Z] Accepted request OPTIONS /asterius-f1308/us-central1/api/createUser?name=Cal --> api
+[debug] [2020-04-15T23:59:48.037Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-15T23:59:48.037Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: Assigning socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-15T23:59:48.037Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: BUSY 
+[debug] [2020-04-15T23:59:48.038Z] [runtime-status] [10492] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-15T23:59:48.040Z] [runtime-status] [10492] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-15T23:59:48.040Z] [runtime-status] [10492] Running api in mode HTTPS 
+[debug] [2020-04-15T23:59:48.040Z] [runtime-status] [10492] Attempting to listen to socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-15T23:59:48.041Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-15T23:59:48.043Z] [runtime-status] [10492] Ephemeral server handling OPTIONS request 
+[debug] [2020-04-15T23:59:48.044Z] [runtime-status] [10492] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-15T23:59:48.046Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: IDLE 
+[debug] [2020-04-15T23:59:48.046Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-04-15T23:59:48.047Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-15T23:59:48.047Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-15T23:59:48.047Z] Accepted request POST /asterius-f1308/us-central1/api/createUser?name=Cal --> api
+[debug] [2020-04-15T23:59:48.047Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-15T23:59:48.047Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: Assigning socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-15T23:59:48.047Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: BUSY 
+[debug] [2020-04-15T23:59:48.055Z] [runtime-status] [10492] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-15T23:59:48.056Z] [runtime-status] [10492] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-15T23:59:48.056Z] [runtime-status] [10492] Running api in mode HTTPS 
+[debug] [2020-04-15T23:59:48.056Z] [runtime-status] [10492] Attempting to listen to socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-15T23:59:48.057Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-15T23:59:48.059Z] [runtime-status] [10492] Ephemeral server handling POST request 
+[debug] [2020-04-15T23:59:48.059Z] [runtime-status] [10492] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-15T23:59:49.083Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: IDLE 
+[debug] [2020-04-15T23:59:49.083Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] >  increment count user {"user":"increment count user"}
+[debug] [2020-04-16T00:00:39.111Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-16T00:00:39.111Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-16T00:00:39.111Z] Accepted request OPTIONS /asterius-f1308/us-central1/api/createUser?name=Alae --> api
+[debug] [2020-04-16T00:00:39.111Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-16T00:00:39.111Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: Assigning socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-16T00:00:39.112Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: BUSY 
+[debug] [2020-04-16T00:00:39.113Z] [runtime-status] [10492] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-16T00:00:39.115Z] [runtime-status] [10492] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-16T00:00:39.115Z] [runtime-status] [10492] Running api in mode HTTPS 
+[debug] [2020-04-16T00:00:39.116Z] [runtime-status] [10492] Attempting to listen to socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-16T00:00:39.117Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-16T00:00:39.120Z] [runtime-status] [10492] Ephemeral server handling OPTIONS request 
+[debug] [2020-04-16T00:00:39.120Z] [runtime-status] [10492] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-16T00:00:39.123Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-04-16T00:00:39.123Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-04-16T00:00:39.123Z] Accepted request POST /asterius-f1308/us-central1/api/createUser?name=Alae --> api
+[debug] [2020-04-16T00:00:39.123Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-16T00:00:39.124Z] [worker-api-0ef039d7-4979-43b1-a9d2-b2e19b805e79]: Assigning socketPath: \\?\pipe\D:\Angular\preloading\functions\10008 
+[debug] [2020-04-16T00:00:39.124Z] [worker-api-0ef039d7-4979-43b1-a9d2-b2e19b805e79]: BUSY 
+[debug] [2020-04-16T00:00:39.125Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: IDLE 
+[debug] [2020-04-16T00:00:39.125Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-16T00:00:39.137Z] [runtime-status] [10008] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-16T00:00:39.138Z] [runtime-status] [10008] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-16T00:00:39.138Z] [runtime-status] [10008] Running api in mode HTTPS 
+[debug] [2020-04-16T00:00:39.149Z] [runtime-status] [10008] Attempting to listen to socketPath: \\?\pipe\D:\Angular\preloading\functions\10008 
+[debug] [2020-04-16T00:00:39.153Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-16T00:00:39.166Z] [runtime-status] [10008] Ephemeral server handling POST request 
+[debug] [2020-04-16T00:00:39.170Z] [runtime-status] [10008] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~2s
+[debug] [2020-04-16T00:00:41.960Z] [worker-api-0ef039d7-4979-43b1-a9d2-b2e19b805e79]: IDLE 
+[debug] [2020-04-16T00:00:41.961Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] >  increment count user {"user":"increment count user"}
+[debug] [2020-04-16T00:02:45.469Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-16T00:02:45.469Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-16T00:02:45.469Z] Accepted request OPTIONS /asterius-f1308/us-central1/api/createUser?name=asdq --> api
+[debug] [2020-04-16T00:02:45.469Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-16T00:02:45.469Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: Assigning socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-16T00:02:45.469Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: BUSY 
+[debug] [2020-04-16T00:02:45.472Z] [runtime-status] [10492] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-16T00:02:45.473Z] [runtime-status] [10492] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-16T00:02:45.473Z] [runtime-status] [10492] Running api in mode HTTPS 
+[debug] [2020-04-16T00:02:45.474Z] [runtime-status] [10492] Attempting to listen to socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-16T00:02:45.475Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-16T00:02:45.477Z] [runtime-status] [10492] Ephemeral server handling OPTIONS request 
+[debug] [2020-04-16T00:02:45.478Z] [runtime-status] [10492] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-16T00:02:45.480Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: IDLE 
+[debug] [2020-04-16T00:02:45.480Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-04-16T00:02:45.481Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-16T00:02:45.482Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-16T00:02:45.482Z] Accepted request POST /asterius-f1308/us-central1/api/createUser?name=asdq --> api
+[debug] [2020-04-16T00:02:45.482Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-16T00:02:45.482Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: Assigning socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-16T00:02:45.482Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: BUSY 
+[debug] [2020-04-16T00:02:45.489Z] [runtime-status] [10492] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-16T00:02:45.490Z] [runtime-status] [10492] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-16T00:02:45.490Z] [runtime-status] [10492] Running api in mode HTTPS 
+[debug] [2020-04-16T00:02:45.490Z] [runtime-status] [10492] Attempting to listen to socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-16T00:02:45.491Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-16T00:02:45.494Z] [runtime-status] [10492] Ephemeral server handling POST request 
+[debug] [2020-04-16T00:02:45.494Z] [runtime-status] [10492] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-16T00:02:46.471Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: IDLE 
+[debug] [2020-04-16T00:02:46.471Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] >  increment count user {"user":"increment count user"}
+[debug] [2020-04-16T00:03:33.738Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-16T00:03:33.739Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-16T00:03:33.739Z] Accepted request OPTIONS /asterius-f1308/us-central1/api/createUser?name=qwerq --> api
+[debug] [2020-04-16T00:03:33.739Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-16T00:03:33.739Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: Assigning socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-16T00:03:33.739Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: BUSY 
+[debug] [2020-04-16T00:03:33.740Z] [runtime-status] [10492] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-16T00:03:33.742Z] [runtime-status] [10492] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-16T00:03:33.743Z] [runtime-status] [10492] Running api in mode HTTPS 
+[debug] [2020-04-16T00:03:33.743Z] [runtime-status] [10492] Attempting to listen to socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-16T00:03:33.744Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-16T00:03:33.746Z] [runtime-status] [10492] Ephemeral server handling OPTIONS request 
+[debug] [2020-04-16T00:03:33.747Z] [runtime-status] [10492] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-16T00:03:33.748Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: IDLE 
+[debug] [2020-04-16T00:03:33.749Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-04-16T00:03:33.750Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-16T00:03:33.750Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-16T00:03:33.750Z] Accepted request POST /asterius-f1308/us-central1/api/createUser?name=qwerq --> api
+[debug] [2020-04-16T00:03:33.750Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-16T00:03:33.751Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: Assigning socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-16T00:03:33.751Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: BUSY 
+[debug] [2020-04-16T00:03:33.758Z] [runtime-status] [10492] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-16T00:03:33.761Z] [runtime-status] [10492] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-16T00:03:33.761Z] [runtime-status] [10492] Running api in mode HTTPS 
+[debug] [2020-04-16T00:03:33.761Z] [runtime-status] [10492] Attempting to listen to socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-16T00:03:33.763Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-16T00:03:33.764Z] [runtime-status] [10492] Ephemeral server handling POST request 
+[debug] [2020-04-16T00:03:33.765Z] [runtime-status] [10492] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-16T00:03:34.726Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: IDLE 
+[debug] [2020-04-16T00:03:34.727Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] >  increment count user {"user":"increment count user"}
+[debug] [2020-04-16T00:06:31.248Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-16T00:06:31.248Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-16T00:06:31.249Z] Accepted request OPTIONS /asterius-f1308/us-central1/api/createUser?name=1qwe --> api
+[debug] [2020-04-16T00:06:31.249Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-16T00:06:31.249Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: Assigning socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-16T00:06:31.249Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: BUSY 
+[debug] [2020-04-16T00:06:31.250Z] [runtime-status] [10492] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-16T00:06:31.252Z] [runtime-status] [10492] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-16T00:06:31.252Z] [runtime-status] [10492] Running api in mode HTTPS 
+[debug] [2020-04-16T00:06:31.252Z] [runtime-status] [10492] Attempting to listen to socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-16T00:06:31.253Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-16T00:06:31.257Z] [runtime-status] [10492] Ephemeral server handling OPTIONS request 
+[debug] [2020-04-16T00:06:31.257Z] [runtime-status] [10492] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-16T00:06:31.259Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: IDLE 
+[debug] [2020-04-16T00:06:31.259Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-04-16T00:06:31.259Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-16T00:06:31.259Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-16T00:06:31.260Z] Accepted request POST /asterius-f1308/us-central1/api/createUser?name=1qwe --> api
+[debug] [2020-04-16T00:06:31.260Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-16T00:06:31.260Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: Assigning socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-16T00:06:31.260Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: BUSY 
+[debug] [2020-04-16T00:06:31.268Z] [runtime-status] [10492] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-16T00:06:31.270Z] [runtime-status] [10492] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-16T00:06:31.270Z] [runtime-status] [10492] Running api in mode HTTPS 
+[debug] [2020-04-16T00:06:31.270Z] [runtime-status] [10492] Attempting to listen to socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-16T00:06:31.271Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-16T00:06:31.274Z] [runtime-status] [10492] Ephemeral server handling POST request 
+[debug] [2020-04-16T00:06:31.274Z] [runtime-status] [10492] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-16T00:06:32.268Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: IDLE 
+[debug] [2020-04-16T00:06:32.268Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] >  increment count user {"user":"increment count user"}
+[debug] [2020-04-16T03:24:51.233Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-16T03:24:51.233Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-16T03:24:51.234Z] Accepted request OPTIONS /asterius-f1308/us-central1/api/createUser?name=Daniel --> api
+[debug] [2020-04-16T03:24:51.234Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-16T03:24:51.234Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: Assigning socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-16T03:24:51.234Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: BUSY 
+[debug] [2020-04-16T03:24:51.236Z] [runtime-status] [10492] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-16T03:24:51.240Z] [runtime-status] [10492] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-16T03:24:51.240Z] [runtime-status] [10492] Running api in mode HTTPS 
+[debug] [2020-04-16T03:24:51.240Z] [runtime-status] [10492] Attempting to listen to socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-16T03:24:51.244Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-16T03:24:51.247Z] [runtime-status] [10492] Ephemeral server handling OPTIONS request 
+[debug] [2020-04-16T03:24:51.248Z] [runtime-status] [10492] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~1s
+[debug] [2020-04-16T03:24:51.252Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: IDLE 
+[debug] [2020-04-16T03:24:51.252Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-04-16T03:24:51.253Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-16T03:24:51.253Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-16T03:24:51.253Z] Accepted request POST /asterius-f1308/us-central1/api/createUser?name=Daniel --> api
+[debug] [2020-04-16T03:24:51.253Z] [worker-pool] submitWork(triggerId=api) 
+[debug] [2020-04-16T03:24:51.253Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: Assigning socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-16T03:24:51.253Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: BUSY 
+[debug] [2020-04-16T03:24:51.260Z] [runtime-status] [10492] Trigger "api" has been found, beginning invocation! 
+[info] i  functions: Beginning execution of "api"
+[debug] [2020-04-16T03:24:51.266Z] [runtime-status] [10492] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} 
+[debug] [2020-04-16T03:24:51.268Z] [runtime-status] [10492] Running api in mode HTTPS 
+[debug] [2020-04-16T03:24:51.268Z] [runtime-status] [10492] Attempting to listen to socketPath: \\?\pipe\D:\Angular\preloading\functions\10492 
+[debug] [2020-04-16T03:24:51.269Z] [functions] Runtime ready! Sending request! 
+[debug] [2020-04-16T03:24:51.272Z] [runtime-status] [10492] Ephemeral server handling POST request 
+[debug] [2020-04-16T03:24:51.273Z] [runtime-status] [10492] Ephemeral server survived. 
+[info] i  functions: Finished "api" in ~2s
+[debug] [2020-04-16T03:24:53.924Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: IDLE 
+[debug] [2020-04-16T03:24:53.924Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] >  increment count user {"user":"increment count user"}
+[debug] [2020-04-16T04:36:54.217Z] [worker-api-0ef039d7-4979-43b1-a9d2-b2e19b805e79]: exited 
+[debug] [2020-04-16T04:36:54.221Z] [worker-api-0ef039d7-4979-43b1-a9d2-b2e19b805e79]: FINISHED 
+[debug] [2020-04-16T04:36:54.224Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: exited 
+[debug] [2020-04-16T04:36:54.224Z] [worker-api-7a23dcb1-9b9d-4d65-bcca-ee48dbaa0ac8]: FINISHED 
+[debug] [2020-04-16T04:36:54.237Z] [worker-~diagnostic~-e8f3373e-1990-4b04-8ee3-009b9d01025a]: exited 
+[debug] [2020-04-16T04:36:54.238Z] [worker-~diagnostic~-e8f3373e-1990-4b04-8ee3-009b9d01025a]: FINISHED 
+[debug] [2020-04-16T20:48:33.716Z] ----------------------------------------------------------------------
+[debug] [2020-04-16T20:48:33.720Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\drami\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2020-04-16T20:48:33.721Z] CLI Version:   8.0.3
+[debug] [2020-04-16T20:48:33.721Z] Platform:      win32
+[debug] [2020-04-16T20:48:33.721Z] Node Version:  v10.16.0
+[debug] [2020-04-16T20:48:33.722Z] Time:          Thu Apr 16 2020 14:48:33 GMT-0600 (GMT-06:00)
+[debug] [2020-04-16T20:48:33.722Z] ----------------------------------------------------------------------
+[debug] [2020-04-16T20:48:33.722Z] 
+[debug] [2020-04-16T20:48:33.743Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-16T20:48:33.744Z] > authorizing via signed-in user
+[debug] [2020-04-16T20:48:33.745Z] [iam] checking project asterius-f1308 for permissions ["firebase.projects.get"]
+[debug] [2020-04-16T20:48:33.748Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-04-16T20:48:33.748Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
  <request body omitted>
-[warn] !  functions: Upload Error: Server Error. getaddrinfo ENOTFOUND storage.googleapis.com storage.googleapis.com:443
-[debug] [2020-04-15T15:39:08.304Z] Error: getaddrinfo ENOTFOUND storage.googleapis.com storage.googleapis.com:443
-    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:56:26)
-[error] 
-[error] Error: Server Error. getaddrinfo ENOTFOUND storage.googleapis.com storage.googleapis.com:443
+[debug] [2020-04-16T20:48:35.954Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 16 Apr 2020 20:48:35 GMT","server":"scaffolding on HTTPServer2","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-16T20:48:35.958Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/asterius-f1308:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-04-16T20:48:37.905Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 16 Apr 2020 20:48:37 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=680","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-16T20:48:37.906Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/asterius-f1308  
+ 
+[debug] [2020-04-16T20:48:39.394Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 16 Apr 2020 20:48:38 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Serving from 'D:\Angular\preloading'...
+[info] 
+[debug] [2020-04-16T20:48:39.405Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/asterius-f1308/webApps/-/config  
+ 
+[debug] [2020-04-16T20:48:40.626Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 16 Apr 2020 20:48:39 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[preloading]: Serving hosting files from: dist/preloading
+[info] +  hosting[preloading]: Local server: http://localhost:5000
+[warn] !  Your requested "node" version "8" doesn't match your global version "10"
+[info] +  functions: functions emulator started at http://localhost:5001
+[info] i  functions: Watching "D:\Angular\preloading\functions" for Cloud Functions...
+[debug] [2020-04-16T20:48:41.442Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-04-16T20:48:41.443Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 
+[debug] [2020-04-16T20:48:41.443Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-04-16T20:48:41.443Z] [worker-~diagnostic~-68724e82-d673-4b20-a4ca-b6759cefd7fb]: Assigning socketPath: \\?\pipe\D:\Angular\preloading\functions\21668 
+[debug] [2020-04-16T20:48:41.443Z] [worker-~diagnostic~-68724e82-d673-4b20-a4ca-b6759cefd7fb]: BUSY 
+[debug] [2020-04-16T20:48:42.061Z] [runtime-status] [21668] Functions runtime initialized. {"cwd":"D:\\Angular\\preloading\\functions","node_version":"10.16.0"} 
+[debug] [2020-04-16T20:48:42.062Z] [runtime-status] [21668] Disabled runtime features: undefined 
+[debug] [2020-04-16T20:48:42.067Z] [runtime-status] [21668] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-04-16T20:48:42.069Z] [runtime-status] [21668] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-04-16T20:48:42.073Z] [runtime-status] [21668] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-04-16T20:48:42.349Z] [runtime-status] [21668] Checked functions.config() {"config":{}} 
+[debug] [2020-04-16T20:48:42.349Z] [runtime-status] [21668] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-04-16T20:48:42.350Z] [runtime-status] [21668] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-04-16T20:48:42.351Z] [runtime-status] [21668] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-04-16T20:48:42.351Z] [runtime-status] [21668] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.10.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-04-16T20:48:43.409Z] [runtime-status] [21668] initializeApp(DEFAULT) {"databaseURL":"https://asterius-f1308.firebaseio.com","storageBucket":"asterius-f1308.appspot.com","projectId":"asterius-f1308","credential":{"implicit":false,"projectId":"asterius-f1308","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDAP3Y/T+Oit1XF\n5uytEUKag0KeEOx02WAYTi6Z32aQ2zom6OLk8pseXmx2WdJy+doUL4k8vk2AQ2C8\nd6V8A/2LrS0vjbIylvkz35tNe7oj1iyE4fxUAutFFP7uetu0YkKZ+NekXFam2gwi\nDQDn1Pjvjxe4p2KePsoOD30ZmgEMfUPTzP7JufI+eVe0Pl1GNw2CQXxrg0wMITd5\nx5DFqKh3cLhH4HseZCOVBIThgaFyMg5rl6oUou8GUOILjZmnG+CnsBFcC1PxjCH1\ndPoUhChsSf24IWWKxISBlnUx0PcO2X0MP14JU2ZJZPJCyfvAobUvBVzClxS6EVZ4\nlLubQKcDAgMBAAECggEAEWVsuNFCLauIr8N0BTvQ8BRn8c+25eKfBx6uqYPapHRX\nWxqrIBaH94PfLV0hZaq66NAIYMkY+uid7KVTAdmGlvNmaa2Dw39/217Pjyper0wm\nc9EojnLugS4jh3GcnJe2TnfYY5TAzpEKlLDiim1DfWyls92JrKd34d/Vl9HPaHwW\nRHMXx/df990G0VPDZt1wR6070jy1TeXhs/Ml0jxGLXOKggoZRjry6puPErFTWsNT\n+aKUU+ST9jYydRg+bXOaWnFH1mOY1VfqN3i+BCCRlc3Xy9y1apg1wRhm5SF9+2Ju\ntVMBG9sZ2S+lAEu7UqKbqKNv3zd2P+25nPrbm0VZMQKBgQD3dwBi5zlLjy2kpdxh\norXHwYBo3lWA+70vTwvwf9EK5BZyexsGkyPkc7bulJRqBivolP+Jl4IcONOj5uIM\n5n3QUMp/7MplnPa0WkHl/NCHOcFsDppyrFL9Er2n2lz+L2MeCpNKuRQwYV2/O1g9\n67lrGJYaOSz7epY/dFTWIZER+wKBgQDG4OuuCqCn3mgPZDRHpQXSB3v1HLfSHg10\nT011BDVjG/28oWPh3BDmRDvx+m4SE/JJmOXUqmL6Mf3aq/xPDMOoN23D3nMj2MZQ\nLYasc705sYeBzbV1EIjLvX32gDOA1AxVFqKpGQMBDnR+CwY9vJeq+XqtaBprWdB3\njYDPWno4mQKBgQDEeHaWD34tvz89uXF/Eu+/6KFKoTrBbRyGsvuHtfMB8pTfz11l\nmuykNDrIsK4kf0HdJm67js5+GZ/uQSC3nUfGXF5pslX+1uAH0KEBN/dXZUNrxyxY\nXviEdJye539tT7Ih58OJT+f3gVYsvbEReFV98cc6iqpr/qfLOVEhsQS8gQKBgGqn\ncHzTgjjEUzX93POXEjoCfX2DuyjZqQl5Beb9LMxL1JV2T6Ruajmy2hr43FKhk8vY\nTVjxT0cxzBubJCIYjE0H/LuP7luJA0E4SQLuxsnL5Qm9kdSH23S32Hd7ZSNvlHWF\nQBJDMZM9d0epDd3J5+RvClU4gQKVFfEnV67brLPxAoGBALGYSwS7ecaw6Y3Z4CTg\nTz6D7aZsu6bD16szczkWlW49uNb5iKZpwlkTfJr9KbdmGM4x71jHvKfGCY+C7p7m\nVtn3cszs19OwywywK3KylSr+GsosJOJXg5Zeguk+SAfEHvDFyRXzAwM8sC9fWe1E\n35D8XMvfzl6/6g8JQ8IfXE8F\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-zkmo1@asterius-f1308.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[info] +  functions[api]: http function initialized (http://localhost:5001/asterius-f1308/us-central1/api).
+[debug] [2020-04-16T20:48:45.248Z] [worker-~diagnostic~-68724e82-d673-4b20-a4ca-b6759cefd7fb]: IDLE 
+[debug] [2020-04-16T20:52:07.354Z] File D:\Angular\preloading\functions\src\index.ts changed, reloading triggers 
+[debug] [2020-04-16T20:52:08.355Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) 
+[debug] [2020-04-16T20:52:08.355Z] [worker-~diagnostic~-68724e82-d673-4b20-a4ca-b6759cefd7fb]: FINISHING 
+[debug] [2020-04-16T20:52:08.360Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-04-16T20:52:08.361Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 
+[debug] [2020-04-16T20:52:08.361Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-04-16T20:52:08.361Z] [worker-~diagnostic~-4dc7a39c-9c9c-49c2-9726-c75b4d94ded3]: Assigning socketPath: \\?\pipe\D:\Angular\preloading\functions\4276 
+[debug] [2020-04-16T20:52:08.361Z] [worker-~diagnostic~-4dc7a39c-9c9c-49c2-9726-c75b4d94ded3]: BUSY 
+[debug] [2020-04-16T20:52:08.364Z] [worker-~diagnostic~-68724e82-d673-4b20-a4ca-b6759cefd7fb]: exited 
+[debug] [2020-04-16T20:52:08.365Z] [worker-~diagnostic~-68724e82-d673-4b20-a4ca-b6759cefd7fb]: FINISHED 
+[debug] [2020-04-16T20:52:08.911Z] [runtime-status] [4276] Functions runtime initialized. {"cwd":"D:\\Angular\\preloading\\functions","node_version":"10.16.0"} 
+[debug] [2020-04-16T20:52:08.914Z] [runtime-status] [4276] Disabled runtime features: undefined 
+[debug] [2020-04-16T20:52:08.917Z] [runtime-status] [4276] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-04-16T20:52:08.919Z] [runtime-status] [4276] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-04-16T20:52:08.923Z] [runtime-status] [4276] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-04-16T20:52:08.972Z] [runtime-status] [4276] Checked functions.config() {"config":{}} 
+[debug] [2020-04-16T20:52:08.973Z] [runtime-status] [4276] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-04-16T20:52:08.974Z] [runtime-status] [4276] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-04-16T20:52:08.975Z] [runtime-status] [4276] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-04-16T20:52:08.975Z] [runtime-status] [4276] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.10.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-04-16T20:52:09.113Z] [runtime-status] [4276] initializeApp(DEFAULT) {"databaseURL":"https://asterius-f1308.firebaseio.com","storageBucket":"asterius-f1308.appspot.com","projectId":"asterius-f1308","credential":{"implicit":false,"projectId":"asterius-f1308","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDAP3Y/T+Oit1XF\n5uytEUKag0KeEOx02WAYTi6Z32aQ2zom6OLk8pseXmx2WdJy+doUL4k8vk2AQ2C8\nd6V8A/2LrS0vjbIylvkz35tNe7oj1iyE4fxUAutFFP7uetu0YkKZ+NekXFam2gwi\nDQDn1Pjvjxe4p2KePsoOD30ZmgEMfUPTzP7JufI+eVe0Pl1GNw2CQXxrg0wMITd5\nx5DFqKh3cLhH4HseZCOVBIThgaFyMg5rl6oUou8GUOILjZmnG+CnsBFcC1PxjCH1\ndPoUhChsSf24IWWKxISBlnUx0PcO2X0MP14JU2ZJZPJCyfvAobUvBVzClxS6EVZ4\nlLubQKcDAgMBAAECggEAEWVsuNFCLauIr8N0BTvQ8BRn8c+25eKfBx6uqYPapHRX\nWxqrIBaH94PfLV0hZaq66NAIYMkY+uid7KVTAdmGlvNmaa2Dw39/217Pjyper0wm\nc9EojnLugS4jh3GcnJe2TnfYY5TAzpEKlLDiim1DfWyls92JrKd34d/Vl9HPaHwW\nRHMXx/df990G0VPDZt1wR6070jy1TeXhs/Ml0jxGLXOKggoZRjry6puPErFTWsNT\n+aKUU+ST9jYydRg+bXOaWnFH1mOY1VfqN3i+BCCRlc3Xy9y1apg1wRhm5SF9+2Ju\ntVMBG9sZ2S+lAEu7UqKbqKNv3zd2P+25nPrbm0VZMQKBgQD3dwBi5zlLjy2kpdxh\norXHwYBo3lWA+70vTwvwf9EK5BZyexsGkyPkc7bulJRqBivolP+Jl4IcONOj5uIM\n5n3QUMp/7MplnPa0WkHl/NCHOcFsDppyrFL9Er2n2lz+L2MeCpNKuRQwYV2/O1g9\n67lrGJYaOSz7epY/dFTWIZER+wKBgQDG4OuuCqCn3mgPZDRHpQXSB3v1HLfSHg10\nT011BDVjG/28oWPh3BDmRDvx+m4SE/JJmOXUqmL6Mf3aq/xPDMOoN23D3nMj2MZQ\nLYasc705sYeBzbV1EIjLvX32gDOA1AxVFqKpGQMBDnR+CwY9vJeq+XqtaBprWdB3\njYDPWno4mQKBgQDEeHaWD34tvz89uXF/Eu+/6KFKoTrBbRyGsvuHtfMB8pTfz11l\nmuykNDrIsK4kf0HdJm67js5+GZ/uQSC3nUfGXF5pslX+1uAH0KEBN/dXZUNrxyxY\nXviEdJye539tT7Ih58OJT+f3gVYsvbEReFV98cc6iqpr/qfLOVEhsQS8gQKBgGqn\ncHzTgjjEUzX93POXEjoCfX2DuyjZqQl5Beb9LMxL1JV2T6Ruajmy2hr43FKhk8vY\nTVjxT0cxzBubJCIYjE0H/LuP7luJA0E4SQLuxsnL5Qm9kdSH23S32Hd7ZSNvlHWF\nQBJDMZM9d0epDd3J5+RvClU4gQKVFfEnV67brLPxAoGBALGYSwS7ecaw6Y3Z4CTg\nTz6D7aZsu6bD16szczkWlW49uNb5iKZpwlkTfJr9KbdmGM4x71jHvKfGCY+C7p7m\nVtn3cszs19OwywywK3KylSr+GsosJOJXg5Zeguk+SAfEHvDFyRXzAwM8sC9fWe1E\n35D8XMvfzl6/6g8JQ8IfXE8F\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-zkmo1@asterius-f1308.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-04-16T20:52:09.384Z] [worker-~diagnostic~-4dc7a39c-9c9c-49c2-9726-c75b4d94ded3]: IDLE 
+[debug] [2020-04-16T20:52:12.436Z] File D:\Angular\preloading\functions\src\index.ts changed, reloading triggers 
+[debug] [2020-04-16T20:52:13.437Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) 
+[debug] [2020-04-16T20:52:13.437Z] [worker-~diagnostic~-4dc7a39c-9c9c-49c2-9726-c75b4d94ded3]: FINISHING 
+[debug] [2020-04-16T20:52:13.437Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1 
+[debug] [2020-04-16T20:52:13.441Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-04-16T20:52:13.441Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 
+[debug] [2020-04-16T20:52:13.441Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-04-16T20:52:13.441Z] [worker-~diagnostic~-3ede6e44-a644-4b30-b1d3-c088195b1969]: Assigning socketPath: \\?\pipe\D:\Angular\preloading\functions\1340 
+[debug] [2020-04-16T20:52:13.441Z] [worker-~diagnostic~-3ede6e44-a644-4b30-b1d3-c088195b1969]: BUSY 
+[debug] [2020-04-16T20:52:13.447Z] [worker-~diagnostic~-4dc7a39c-9c9c-49c2-9726-c75b4d94ded3]: exited 
+[debug] [2020-04-16T20:52:13.447Z] [worker-~diagnostic~-4dc7a39c-9c9c-49c2-9726-c75b4d94ded3]: FINISHED 
+[debug] [2020-04-16T20:52:13.962Z] [runtime-status] [1340] Functions runtime initialized. {"cwd":"D:\\Angular\\preloading\\functions","node_version":"10.16.0"} 
+[debug] [2020-04-16T20:52:13.968Z] [runtime-status] [1340] Disabled runtime features: undefined 
+[debug] [2020-04-16T20:52:13.973Z] [runtime-status] [1340] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-04-16T20:52:13.975Z] [runtime-status] [1340] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-04-16T20:52:13.982Z] [runtime-status] [1340] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-04-16T20:52:14.051Z] [runtime-status] [1340] Checked functions.config() {"config":{}} 
+[debug] [2020-04-16T20:52:14.052Z] [runtime-status] [1340] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-04-16T20:52:14.054Z] [runtime-status] [1340] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-04-16T20:52:14.055Z] [runtime-status] [1340] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-04-16T20:52:14.055Z] [runtime-status] [1340] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.10.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-04-16T20:52:14.237Z] [runtime-status] [1340] initializeApp(DEFAULT) {"databaseURL":"https://asterius-f1308.firebaseio.com","storageBucket":"asterius-f1308.appspot.com","projectId":"asterius-f1308","credential":{"implicit":false,"projectId":"asterius-f1308","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDAP3Y/T+Oit1XF\n5uytEUKag0KeEOx02WAYTi6Z32aQ2zom6OLk8pseXmx2WdJy+doUL4k8vk2AQ2C8\nd6V8A/2LrS0vjbIylvkz35tNe7oj1iyE4fxUAutFFP7uetu0YkKZ+NekXFam2gwi\nDQDn1Pjvjxe4p2KePsoOD30ZmgEMfUPTzP7JufI+eVe0Pl1GNw2CQXxrg0wMITd5\nx5DFqKh3cLhH4HseZCOVBIThgaFyMg5rl6oUou8GUOILjZmnG+CnsBFcC1PxjCH1\ndPoUhChsSf24IWWKxISBlnUx0PcO2X0MP14JU2ZJZPJCyfvAobUvBVzClxS6EVZ4\nlLubQKcDAgMBAAECggEAEWVsuNFCLauIr8N0BTvQ8BRn8c+25eKfBx6uqYPapHRX\nWxqrIBaH94PfLV0hZaq66NAIYMkY+uid7KVTAdmGlvNmaa2Dw39/217Pjyper0wm\nc9EojnLugS4jh3GcnJe2TnfYY5TAzpEKlLDiim1DfWyls92JrKd34d/Vl9HPaHwW\nRHMXx/df990G0VPDZt1wR6070jy1TeXhs/Ml0jxGLXOKggoZRjry6puPErFTWsNT\n+aKUU+ST9jYydRg+bXOaWnFH1mOY1VfqN3i+BCCRlc3Xy9y1apg1wRhm5SF9+2Ju\ntVMBG9sZ2S+lAEu7UqKbqKNv3zd2P+25nPrbm0VZMQKBgQD3dwBi5zlLjy2kpdxh\norXHwYBo3lWA+70vTwvwf9EK5BZyexsGkyPkc7bulJRqBivolP+Jl4IcONOj5uIM\n5n3QUMp/7MplnPa0WkHl/NCHOcFsDppyrFL9Er2n2lz+L2MeCpNKuRQwYV2/O1g9\n67lrGJYaOSz7epY/dFTWIZER+wKBgQDG4OuuCqCn3mgPZDRHpQXSB3v1HLfSHg10\nT011BDVjG/28oWPh3BDmRDvx+m4SE/JJmOXUqmL6Mf3aq/xPDMOoN23D3nMj2MZQ\nLYasc705sYeBzbV1EIjLvX32gDOA1AxVFqKpGQMBDnR+CwY9vJeq+XqtaBprWdB3\njYDPWno4mQKBgQDEeHaWD34tvz89uXF/Eu+/6KFKoTrBbRyGsvuHtfMB8pTfz11l\nmuykNDrIsK4kf0HdJm67js5+GZ/uQSC3nUfGXF5pslX+1uAH0KEBN/dXZUNrxyxY\nXviEdJye539tT7Ih58OJT+f3gVYsvbEReFV98cc6iqpr/qfLOVEhsQS8gQKBgGqn\ncHzTgjjEUzX93POXEjoCfX2DuyjZqQl5Beb9LMxL1JV2T6Ruajmy2hr43FKhk8vY\nTVjxT0cxzBubJCIYjE0H/LuP7luJA0E4SQLuxsnL5Qm9kdSH23S32Hd7ZSNvlHWF\nQBJDMZM9d0epDd3J5+RvClU4gQKVFfEnV67brLPxAoGBALGYSwS7ecaw6Y3Z4CTg\nTz6D7aZsu6bD16szczkWlW49uNb5iKZpwlkTfJr9KbdmGM4x71jHvKfGCY+C7p7m\nVtn3cszs19OwywywK3KylSr+GsosJOJXg5Zeguk+SAfEHvDFyRXzAwM8sC9fWe1E\n35D8XMvfzl6/6g8JQ8IfXE8F\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-zkmo1@asterius-f1308.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-04-16T20:52:14.551Z] [worker-~diagnostic~-3ede6e44-a644-4b30-b1d3-c088195b1969]: IDLE 
+[debug] [2020-04-16T20:54:50.276Z] File D:\Angular\preloading\functions\src\index.ts changed, reloading triggers 
+[debug] [2020-04-16T20:54:51.281Z] [worker-pool] Shutting down IDLE worker (~diagnostic~) 
+[debug] [2020-04-16T20:54:51.281Z] [worker-~diagnostic~-3ede6e44-a644-4b30-b1d3-c088195b1969]: FINISHING 
+[debug] [2020-04-16T20:54:51.282Z] [worker-pool] Cleaned up workers for ~diagnostic~: 2 --> 1 
+[debug] [2020-04-16T20:54:51.296Z] [worker-pool] addWorker(~diagnostic~) 
+[debug] [2020-04-16T20:54:51.297Z] [worker-pool] Adding worker with key ~diagnostic~, total=2 
+[debug] [2020-04-16T20:54:51.298Z] [worker-pool] submitWork(triggerId=) 
+[debug] [2020-04-16T20:54:51.298Z] [worker-~diagnostic~-11b71714-dc84-4e70-a7d4-c2663d1a5a18]: Assigning socketPath: \\?\pipe\D:\Angular\preloading\functions\20536 
+[debug] [2020-04-16T20:54:51.298Z] [worker-~diagnostic~-11b71714-dc84-4e70-a7d4-c2663d1a5a18]: BUSY 
+[debug] [2020-04-16T20:54:51.300Z] [worker-~diagnostic~-3ede6e44-a644-4b30-b1d3-c088195b1969]: exited 
+[debug] [2020-04-16T20:54:51.300Z] [worker-~diagnostic~-3ede6e44-a644-4b30-b1d3-c088195b1969]: FINISHED 
+[debug] [2020-04-16T20:54:51.940Z] [runtime-status] [20536] Functions runtime initialized. {"cwd":"D:\\Angular\\preloading\\functions","node_version":"10.16.0"} 
+[debug] [2020-04-16T20:54:51.943Z] [runtime-status] [20536] Disabled runtime features: undefined 
+[debug] [2020-04-16T20:54:51.949Z] [runtime-status] [20536] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-04-16T20:54:51.951Z] [runtime-status] [20536] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-04-16T20:54:51.956Z] [runtime-status] [20536] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] 
+[debug] [2020-04-16T20:54:52.015Z] [runtime-status] [20536] Checked functions.config() {"config":{}} 
+[debug] [2020-04-16T20:54:52.016Z] [runtime-status] [20536] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-04-16T20:54:52.017Z] [runtime-status] [20536] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-admin\\lib\\index.js"} 
+[debug] [2020-04-16T20:54:52.018Z] [runtime-status] [20536] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-functions\\lib\\index.js"} 
+[debug] [2020-04-16T20:54:52.019Z] [runtime-status] [20536] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.10.0","resolution":"D:\\Angular\\preloading\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} 
+[debug] [2020-04-16T20:54:52.187Z] [runtime-status] [20536] initializeApp(DEFAULT) {"databaseURL":"https://asterius-f1308.firebaseio.com","storageBucket":"asterius-f1308.appspot.com","projectId":"asterius-f1308","credential":{"implicit":false,"projectId":"asterius-f1308","privateKey":"-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDAP3Y/T+Oit1XF\n5uytEUKag0KeEOx02WAYTi6Z32aQ2zom6OLk8pseXmx2WdJy+doUL4k8vk2AQ2C8\nd6V8A/2LrS0vjbIylvkz35tNe7oj1iyE4fxUAutFFP7uetu0YkKZ+NekXFam2gwi\nDQDn1Pjvjxe4p2KePsoOD30ZmgEMfUPTzP7JufI+eVe0Pl1GNw2CQXxrg0wMITd5\nx5DFqKh3cLhH4HseZCOVBIThgaFyMg5rl6oUou8GUOILjZmnG+CnsBFcC1PxjCH1\ndPoUhChsSf24IWWKxISBlnUx0PcO2X0MP14JU2ZJZPJCyfvAobUvBVzClxS6EVZ4\nlLubQKcDAgMBAAECggEAEWVsuNFCLauIr8N0BTvQ8BRn8c+25eKfBx6uqYPapHRX\nWxqrIBaH94PfLV0hZaq66NAIYMkY+uid7KVTAdmGlvNmaa2Dw39/217Pjyper0wm\nc9EojnLugS4jh3GcnJe2TnfYY5TAzpEKlLDiim1DfWyls92JrKd34d/Vl9HPaHwW\nRHMXx/df990G0VPDZt1wR6070jy1TeXhs/Ml0jxGLXOKggoZRjry6puPErFTWsNT\n+aKUU+ST9jYydRg+bXOaWnFH1mOY1VfqN3i+BCCRlc3Xy9y1apg1wRhm5SF9+2Ju\ntVMBG9sZ2S+lAEu7UqKbqKNv3zd2P+25nPrbm0VZMQKBgQD3dwBi5zlLjy2kpdxh\norXHwYBo3lWA+70vTwvwf9EK5BZyexsGkyPkc7bulJRqBivolP+Jl4IcONOj5uIM\n5n3QUMp/7MplnPa0WkHl/NCHOcFsDppyrFL9Er2n2lz+L2MeCpNKuRQwYV2/O1g9\n67lrGJYaOSz7epY/dFTWIZER+wKBgQDG4OuuCqCn3mgPZDRHpQXSB3v1HLfSHg10\nT011BDVjG/28oWPh3BDmRDvx+m4SE/JJmOXUqmL6Mf3aq/xPDMOoN23D3nMj2MZQ\nLYasc705sYeBzbV1EIjLvX32gDOA1AxVFqKpGQMBDnR+CwY9vJeq+XqtaBprWdB3\njYDPWno4mQKBgQDEeHaWD34tvz89uXF/Eu+/6KFKoTrBbRyGsvuHtfMB8pTfz11l\nmuykNDrIsK4kf0HdJm67js5+GZ/uQSC3nUfGXF5pslX+1uAH0KEBN/dXZUNrxyxY\nXviEdJye539tT7Ih58OJT+f3gVYsvbEReFV98cc6iqpr/qfLOVEhsQS8gQKBgGqn\ncHzTgjjEUzX93POXEjoCfX2DuyjZqQl5Beb9LMxL1JV2T6Ruajmy2hr43FKhk8vY\nTVjxT0cxzBubJCIYjE0H/LuP7luJA0E4SQLuxsnL5Qm9kdSH23S32Hd7ZSNvlHWF\nQBJDMZM9d0epDd3J5+RvClU4gQKVFfEnV67brLPxAoGBALGYSwS7ecaw6Y3Z4CTg\nTz6D7aZsu6bD16szczkWlW49uNb5iKZpwlkTfJr9KbdmGM4x71jHvKfGCY+C7p7m\nVtn3cszs19OwywywK3KylSr+GsosJOJXg5Zeguk+SAfEHvDFyRXzAwM8sC9fWe1E\n35D8XMvfzl6/6g8JQ8IfXE8F\n-----END PRIVATE KEY-----\n","clientEmail":"firebase-adminsdk-zkmo1@asterius-f1308.iam.gserviceaccount.com","httpClient":{"retry":{"maxRetries":4,"statusCodes":[503],"ioErrorCodes":["ECONNRESET","ETIMEDOUT"],"backOffFactor":0.5,"maxDelayInMillis":60000}}}} 
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production.
+[debug] [2020-04-16T20:54:52.640Z] [worker-~diagnostic~-11b71714-dc84-4e70-a7d4-c2663d1a5a18]: IDLE 

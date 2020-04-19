@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "asterius-f1308"
+  },
+  "targets": {
+    "asterius-f1308": {
+      "hosting": {
+        "preloading": [
+          "asterius-f1308"
+        ]
+      }
+    }
   }
 }

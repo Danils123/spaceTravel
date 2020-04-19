@@ -1,55 +1,134 @@
 import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
 import * as cors from 'cors';
-const express = require('express');
-const app = express();
+import * as express from 'express';
 
-admin.initializeApp(functions.config().firebase);
-const db = admin.firestore();
-// exports.date = functions.https.onRequest((req, res) => res.status(200).json({ date: new Date() }));
-
-const corsHandler = cors({
-    origin: [
-      'http://localhost:4200',
-      'https://danils123.github.io/spaceTravel/'
-    ],
+const serviceAccount = require('./serviceAccountKey.json');
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://asterius-f1308.firebaseio.com"
 });
 
+const app = express();
+const db = admin.firestore();
+
+app.use(cors({origin: true}));
+
+
+
 // Automatically allow cross-origin requests
-app.use(corsHandler);
 
 
 // build multiple CRUD interfaces:
-app.post('/', (req: functions.Request, res: functions.Response) => {
-    db.collection('constants').doc('countUsers').get()
-    .then((snapshot) => {
-        res.status(200).send(snapshot.get("value"));
-    })
-    .catch((err) => {
-        console.log('Error getting documents', err);
-      });
+app.post('/createUser', async (request: functions.Request, response: functions.Response) => {
+    let countUser = await getCountUser();
+    countUser = countUser+1;
+    const constantsRef = db.collection('users');
+    const docSnap =  await constantsRef.doc(countUser.toString());
+    await docSnap.set({name: request.query.name});
+    await incrementCountUsers();
+    response.status(200).send({id: countUser, name: request.query.name});
 });
 
+app.get('/getUsers', async (request: functions.Request, response: functions.Response) => {
+    const usersRef = db.collection('users');
+    const docSnap =  await usersRef.get();
+    const users = docSnap.docs.map(user => ({id: user.id, name: user.get("name")}));
+    response.json(users);
+});
+
+app.delete('/deleteUser/:id', async (request: functions.Request, response: functions.Response) => {
+  const usersRef = db.collection('users');
+  const docSnap =  await usersRef.doc(request.query.id.toString());
+  await docSnap.delete().catch(() => response.status(500).json(fail));
+
+  response.json(true);
+});
+
+app.post('/asteriuosInvoke', async (request: functions.Request, response: functions.Response) => {
+    const constantsRef      = db.collection('constants');
+    const asteriuosInvoked  =  constantsRef.doc('asteriuosInvoked');
+    const isAsteriousInvoked = await constantsRef.doc('asteriuosInvoked').get();
+    const invocationTimeout  =  await constantsRef.doc('invocationTimeout').get();
+    if(!isAsteriousInvoked.get("value")) {
+      await asteriuosInvoked.set({value: true});
+      response.json("asterious ha sido invocado");
+      setTimeout(async () => {
+        await asteriuosInvoked.set({value: false});
+      }, invocationTimeout.get("value"));
+    } else {
+      response.status(404).json("asterious ya ha sido invocado por otra persona");
+    }
+})
+
+
+app.post('/createMessage', async (request: functions.Request, response: functions.Response) => {
+  let countMessages = await getCountMessage();
+  countMessages =+ 1;
+  const constantsRef = db.collection('messages');
+  const docSnap =  await constantsRef.doc(countMessages.toString());
+  await docSnap.set({
+    message: request.query.message,
+    userId: request.query.id
+  });
+  await incrementCountMessage();
+  response.status(200).send({id: countMessages, message: request.query.message});
+});
+
+app.get('/getMessages', async (request: functions.Request, response: functions.Response) => {
+  const usersRef = db.collection('messages');
+  const docSnap =  await usersRef.get();
+  const messages = docSnap.docs.map(message => {return {id: message.id, name: message.get("message"), userId: message.get("userId")}});
+  response.json(messages);
+});
+
+const getCountUser = (): Promise<number> => {
+  return new Promise(async (resolve, reject) => {
+    const constantsRef = db.collection('constants');
+    const docSnap =  await constantsRef.doc('countUsers').get();
+
+    if (!docSnap.exists) {
+      await incrementCountUsers();
+      resolve(0);
+    } else {
+      const countUser = await docSnap.get("value");
+      resolve(countUser || 0);
+    }
+  });
+}
+
+const getCountMessage = (): Promise<number> => {
+  return new Promise(async (resolve, reject) => {
+    const constantsRef = db.collection('constants');
+    const docSnap =  await constantsRef.doc('countMessages').get();
+
+    if (!docSnap.exists) {
+      await incrementCountUsers();
+      resolve(0);
+    } else {
+      const countUser = await docSnap.get("value");
+      resolve(countUser || 0);
+    }
+  });
+}
+
+const incrementCountUsers = async () => {
+  const constantsRef = db.collection('constants');
+  const docSnap = constantsRef.doc('countUsers');
+  const countUser = await docSnap.get();
+  docSnap.set({value: countUser.get("value")+1})
+    .then(()=> console.log('increment count user'))
+    .catch((error)=> console.log('Error when increment count user', error));
+}
+
+const incrementCountMessage = async () => {
+  const constantsRef = db.collection('constants');
+  const docSnap = constantsRef.doc('countMessages');
+  const countUser = await docSnap.get();
+  docSnap.set({value: countUser.get("value")+1})
+    .then(()=> console.log('increment count message'))
+    .catch((error)=> console.log('Error when increment count message', error));
+}
+
 // Expose Express API as a single Cloud Function:
-exports.createUser = functions.https.onRequest(app);
-
-
-
-// exports.createUser = functions.https.onRequest((req: functions.Request, res: functions.Response) => {
-//     // res.set('Access-Control-Allow-Origin', '*');
-//     // res.set('Access-Control-Allow-Methods', 'GET, PUT, POST, OPTIONS');
-//     // res.set('Access-Control-Allow-Headers', '*');
-
-//     // @ts-ignore
-//     // tslint:disable-next-line:no-empty
-//     corsHandler(req, res, () => {
-//         res.status(200).send( { id: 1});
-//     });
-//     // const name = req.body.name;
-//     // if (req.method === 'OPTIONS') {
-//     //     res.end();
-//     // } else {
-//     //     const name = req.body.name;
-//     //     res.status(200).send( {name: name, id: 1});
-//     // }
-// });
+export const api = functions.https.onRequest(app);
