@@ -1,12 +1,13 @@
 <div id="container">
     <div id="main-section" #background>
         <div class="layer layerImage" id="layer_0" data-depth='0.10' data-type='parallax'></div>
-        <div class="layer layerVideo" [hidden]="!isAsteriousInvoked" data-depth='0.10' data-type='parallax'>
-            <!--  -->
+        <div id="particles-js" class="layer layerImage"></div>
+        <div class="layer layerImage" id="layer_0" [hidden]="isAsteriousInvoked" data-depth='0.10' data-type='parallax'></div>
+        <!-- <div class="layer layerVideo" [hidden]="!isAsteriousInvoked" data-depth='0.10' data-type='parallax'>
             <video autoplay muted loop id="skyVideo">
                 <source src="https://firebasestorage.googleapis.com/v0/b/asterius-f1308.appspot.com/o/sky.mp4?alt=media&token=477cdb28-ece8-452a-98e1-16f47bcadbe8" type="video/mp4">
             </video>
-        </div>
+        </div> -->
 
         <!-- <div class="layer layerImage" [ngClass]="{'alreadyAsteriuosInvoked': isAsteriousInvoked, 'notAsteriuosInvoked': !isAsteriousInvoked}" id="layer_1" data-depth='0.10' data-type='parallax'></div> -->
 
@@ -18,7 +19,7 @@
 
         <div *ngIf="isPreloadingFinish" class="w-100 h-100 text-white position-fixed d-flex flex-column align-content-center layer" id="logo" data-depth='0.30'>
             <h5 [class]="'text-center mb-0 animated '+ subTitleClases.join(' ')">Bienvenidos a</h5>
-            <h1 [class]="'text-center mb-2 animated ' + titleClases.join(' ') "><a href="javascript:void(0)" id="titleLogo" (click)="callAsterious()">ASTERIUS</a></h1>
+            <h1 [class]="'text-center mb-2 animated ' + titleClases.join(' ') "><a href="javascript:void(0)" id="titleLogo" (click)="callAsterious()" class="hvr-pop">ASTERIUS</a></h1>
             <p [class]="'text-center animated ' + secundaryTitleClases.join(' ')" *ngIf="!isAsteriousInvoked">Dale clic a asterius para que podamos pedir un deseo</p>
             <p [class]="'text-center animated ' + secundaryTitleClases.join(' ')" *ngIf="isAsteriousInvoked">Asterious ha sido invocado, pidamos nuestro deseo</p>
         </div>

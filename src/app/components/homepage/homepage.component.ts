@@ -2,12 +2,17 @@ import { Component, OnInit, HostListener, ViewChild, ElementRef } from '@angular
 import { AngularFirestore } from '@angular/fire/firestore';
 import { PreLoadingService } from '../preloading/preLoading.service';
 import { UsersService } from '../../shared/services/users.service';
+import { particles } from '../../shared/models/particles';
+
+declare let particlesJS: any;
+
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
+  public particles = particles;
   public secundaryTitleClases: string[] = [];
   public titleClases: string[] = [];
   public subTitleClases: string[] = [];
@@ -22,9 +27,12 @@ export class HomepageComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    particlesJS.load('particles-js', 'assets/json/particlesjs-config.json', () => {
+      console.log('callback - particles-js config loaded');
+    });
+
     this.plService.getObservable().subscribe(resp => {
       this.isPreloadingFinish = resp;
-      console.log('a', this.isPreloadingFinish);
       this.subTitleClases = ['fadeInDown ',  'slow '];
       this.titleClases = ['fadeInUp ', 'slow '];
       this.secundaryTitleClases = ['fadeIn ', 'very ', 'slow ', 'delay-1s'];
@@ -39,6 +47,10 @@ export class HomepageComponent implements OnInit {
           if (this.isAsteriousInvoked !== resp['value']) {
             this.titleClases = ['heartBeat '];
             this.secundaryTitleClases = ['fadeIn ', 'slow '];
+          }
+
+          if (!this.isAsteriousInvoked) {
+            this.titleClases = [' '];
           }
           // tslint:disable-next-line:no-string-literal
           this.isAsteriousInvoked = resp['value'];

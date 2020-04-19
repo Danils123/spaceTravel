@@ -19,9 +19,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
 
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { RouterModule, PreloadAllModules } from '@angular/router';
-import { MatError } from '@angular/material/form-field';
 import { AutofocusDirective } from './shared/directive/autofocus.directive';
+
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -45,7 +45,8 @@ import { AutofocusDirective } from './shared/directive/autofocus.directive';
     AngularFireAuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [
     {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}

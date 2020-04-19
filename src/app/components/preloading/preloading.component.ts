@@ -29,7 +29,6 @@ export class PreloadingComponent implements OnInit {
     this.pageClases = ['animated', 'pageOutUp', 'slow', 'delay-1s'];
     this.plService.setNick(this.value);
     setTimeout(() => {
-      console.log('endingPreloading', true);
       this.plService.show();
       this.isHide = true;
     }, 3000);

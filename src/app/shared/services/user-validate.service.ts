@@ -16,7 +16,6 @@ export class UserValidateService {
   async isNickValid(control: FormControl): Promise<ErrorInterface> {
     const usersRef = this.db.collection('users');
     const usersSnap = await usersRef.get().toPromise();
-    console.log(usersSnap.docs.filter(x => x.get('name') === control.value));
     return {
       userValid: usersSnap.docs.filter(x => x.get('name') === control.value).length === 0
     };
@@ -26,8 +25,6 @@ export class UserValidateService {
     try {
       const usersRef = this.db.collection('users');
       const usersSnap = await usersRef.get().toPromise();
-      console.log(control.value);
-      console.log(usersSnap.docs.filter(x => x.get('name') === control.value));
       return {
         userValid: usersSnap.docs.filter(x => x.get('name') === control.value).length > 0
       };

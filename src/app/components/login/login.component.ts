@@ -55,7 +55,6 @@ export class LoginComponent implements OnInit {
         this.isvalidating = true;
         this.isUserExist = (await this.uvs.existUser(this.loginFormControl)).userValid;
         if (this.isUserExist) {
-          console.log(this.us.getUser());
           this.response.emit(this.loginFormControl.value);
         } else {
           this.loginFormControl.setErrors({incorrect: true});
@@ -71,7 +70,6 @@ export class LoginComponent implements OnInit {
     try {
       this.isvalidating = true;
       this.isUserValid = (await this.uvs.isNickValid(this.registerFormControl)).userValid;
-      console.log(this.isUserValid);
       if (this.isUserValid) {
         this.us.createUser(this.registerFormControl.value).subscribe((user) => {
           this.response.emit(this.loginFormControl.value);

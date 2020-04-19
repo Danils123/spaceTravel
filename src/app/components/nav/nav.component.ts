@@ -14,7 +14,6 @@ export class NavComponent implements OnInit {
   constructor(public plService: PreLoadingService) {}
   ngOnInit(): void {
     this.plService.getObservable().subscribe(resp => {
-      console.log('nav', resp);
       this.hiddenBrand = resp;
       if( this.hiddenBrand ) {
         this.colorLogoClases = ['fadeOut', 'slow'];
