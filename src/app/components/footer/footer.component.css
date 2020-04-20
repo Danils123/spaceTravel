@@ -1,0 +1,19 @@
+.content {
+    height: 7rem;
+    background-color: #0e0404;
+    position: absolute;
+    width: 100%;
+    top: 100rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: #e2b632;
+}

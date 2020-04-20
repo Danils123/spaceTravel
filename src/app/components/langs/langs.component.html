@@ -1,0 +1,28 @@
+<mat-form-field class="select mr-5">
+    <mat-select [(value)]="defaultLan" (selectionChange)="changeIdiom($event.value)">
+        <mat-option value="es">
+            <div class="row">
+                <div class="col-4">
+                    <img src="../../../assets/images/es.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-3 text-black-">
+                    Español
+                </div>
+            </div>
+
+
+        </mat-option>
+
+        <mat-option value="en">
+            <div class="row">
+                <div class="col-4">
+                    <img src="../../../assets/images/enUSA.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-3 text-black-">
+                    English
+                </div>
+            </div>
+
+        </mat-option>
+    </mat-select>
+</mat-form-field>

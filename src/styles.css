@@ -3331,6 +3331,19 @@ body {
 
 /* end animated css */
 
+.cdk-overlay-container {
+    position: fixed;
+    z-index: 2000!important;
+}
+
+.mat-select {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.mat-option>p {
+    font-family: 'Poppins', sans-serif !important;
+}
+
 
 /* start Hover.css */
 

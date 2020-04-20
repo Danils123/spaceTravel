@@ -8,6 +8,17 @@ p {
     font-family: 'Poppins', sans-serif !important;
 }
 
+#buttons {
+    margin-bottom: 3rem;
+}
+
+.lang {
+    background-color: white;
+    float: right;
+    margin-right: 3rem;
+    margin-top: 0.5rem;
+}
+
 #contenedor {
     background-color: white;
     /* background-color: rgb(247, 243, 243); */
@@ -128,9 +139,18 @@ p {
         max-width: 15rem;
         position: absolute;
         left: 20%;
-        top: 3 0%;
+        top: 37%;
     }
     #logo {
         margin-bottom: 15rem;
+    }
+    .lang {
+        background-color: white;
+        float: right;
+        margin-right: -1rem;
+        margin-top: 0.5rem;
+    }
+    #buttons {
+        margin-bottom: 5rem;
     }
 }

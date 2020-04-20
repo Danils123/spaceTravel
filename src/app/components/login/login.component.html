@@ -1,36 +1,36 @@
 <div id="buttons" class="d-flex flex-row justify-content-center align-content-center animated " [ngClass]="{'fadeOut': isTypeSelect}">
-    <button mat-flat-button color="primary" class="mr-3" (click)="selectType(true)">Iniciar sesión</button>
-    <button mat-flat-button color="warn" (click)="selectType(false)">Registrarse</button>
+    <button mat-flat-button color="primary" class="mr-3" (click)="selectType(true)">{{'login' | traslate}}</button>
+    <button mat-flat-button color="warn" (click)="selectType(false)">{{'register' | traslate}}</button>
 </div>
 
 <div id="inputs" [ngSwitch]="typeInput" class="w-100 d-flex flex-row justify-content-center align-content-center animated" [ngClass]="{'fadeIn': isTypeSelect && typeInput !== undefined }">
     <mat-form-field *ngSwitchCase="true" [style.fontSize]="'20px'" class="w-100 text-center d-flex flex-column" (keyup.enter)="login()">
-        <mat-label>Ingresa tu nick</mat-label>
+        <mat-label>{{'label' | traslate}}</mat-label>
         <input matInput #loginInput [formControl]="loginFormControl" class="w-95" [maxLength]="10" [errorStateMatcher]="matcher">
         <mat-icon *ngIf="isvalidating">
             <i class="fas fa-spinner fa-spin"></i>
         </mat-icon>
-        <mat-hint>Presione enter para ingresar</mat-hint>
+        <mat-hint>{{'loginhint' | traslate}}</mat-hint>
         <mat-error *ngIf="!isUserExist && !loginFormControl.hasError('required')">
-            El usuario que ingresaste no existe, prueba con otro!
+            {{'loginError1' | traslate}}
         </mat-error>
         <mat-error *ngIf="loginFormControl.hasError('required')">
-            Para ingresar necesitas un usuario, prueba registrandote
+            {{'loginError2' | traslate}}
         </mat-error>
     </mat-form-field>
 
     <mat-form-field *ngSwitchCase="false" [style.fontSize]="'20px'" class="w-100 text-center" (keyup.enter)="register()">
-        <mat-label>Registra tu nick</mat-label>
+        <mat-label>{{'registerLabel' | traslate}}</mat-label>
         <input matInput #registerInput [maxLength]="10" class="w-95" [formControl]="registerFormControl" [errorStateMatcher]="matcher">
         <mat-icon *ngIf="isvalidating">
             <i class="fas fa-spinner fa-spin"></i>
         </mat-icon>
-        <mat-hint>Presione enter para registrar nick</mat-hint>
+        <mat-hint>{{'registerhint' | traslate}}</mat-hint>
         <mat-error *ngIf="!isUserValid && !registerFormControl.hasError('required')">
-            El usuario que ingresaste ya existe, prueba con otro!
+            {{'registerError1' | traslate}}
         </mat-error>
         <mat-error *ngIf="registerFormControl.hasError('required')">
-            Para registrarte necesitas un usuario, prueba de nuevo
+            {{'registerError1' | traslate}}
         </mat-error>
     </mat-form-field>
 </div>
