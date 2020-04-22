@@ -1,16 +1,16 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
         <a [class]="'navbar-brand animated ' + colorLogoClases.join(' ')" href="#" [hidden]="hiddenBrand">
-            <img class="logoWhite" src="assets/images/isotipo.png" alt="">
+            <img class="logoWhite" src="assets/images/isotipo.png" alt="" />
         </a>
 
         <a [class]="'navbar-brand animated ' + whiteLogoClases.join(' ')" href="#" [hidden]="!hiddenBrand">
-            <img class="logoWhite" src="assets/images/isotipoWhite.png" alt="">
+            <img class="logoWhite" src="assets/images/isotipoWhite.png" alt="" />
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+			<span class="navbar-toggler-icon"></span>
+		</button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
@@ -23,12 +23,11 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="#">{{nick}} <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item active text-white">
+                    <!-- <li class="nav-item active text-white">
                         <app-langs></app-langs>
-                    </li>
+                    </li> -->
                 </ul>
             </form>
         </div>
     </div>
-
 </nav>

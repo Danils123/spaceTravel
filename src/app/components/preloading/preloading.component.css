@@ -9,14 +9,14 @@ p {
 }
 
 #buttons {
-    margin-bottom: 3rem;
+    margin-bottom: 10rem;
 }
 
 .lang {
     background-color: white;
     float: right;
     margin-right: 3rem;
-    margin-top: 0.5rem;
+    margin-top: 2rem;
 }
 
 #contenedor {
@@ -36,10 +36,10 @@ p {
 }
 
 .logoImg {
-    max-width: 15rem;
+    max-width: 17rem;
     position: absolute;
-    left: 43%;
-    top: 30%;
+    /* left: 43%; */
+    /* top: 40%; */
 }
 
 .logoImg:nth-child(1) {
@@ -138,19 +138,15 @@ p {
     .logoImg {
         max-width: 15rem;
         position: absolute;
-        left: 20%;
-        top: 37%;
-    }
-    #logo {
-        margin-bottom: 15rem;
+        /* top: 99% !important; */
     }
     .lang {
         background-color: white;
         float: right;
-        margin-right: -1rem;
-        margin-top: 0.5rem;
+        margin-right: -1rem !important;
+        margin-top: 0.5rem !important;
     }
     #buttons {
-        margin-bottom: 5rem;
+        margin-bottom: 7rem !important;
     }
 }

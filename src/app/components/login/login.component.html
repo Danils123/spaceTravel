@@ -1,12 +1,12 @@
-<div id="buttons" class="d-flex flex-row justify-content-center align-content-center animated " [ngClass]="{'fadeOut': isTypeSelect}">
-    <button mat-flat-button color="primary" class="mr-3" (click)="selectType(true)">{{'login' | traslate}}</button>
-    <button mat-flat-button color="warn" (click)="selectType(false)">{{'register' | traslate}}</button>
+<div id="buttons" class="d-flex flex-row justify-content-center align-content-center animated " [ngClass]="{'fadeOut mb--5': isTypeSelect}">
+    <button mat-flat-button color="primary" class="mr-2" (click)="selectType(true)">{{'login' | traslate}}</button>
+    <button mat-flat-button color="warn" class="ml-2" (click)="selectType(false)">{{'register' | traslate}}</button>
 </div>
 
 <div id="inputs" [ngSwitch]="typeInput" class="w-100 d-flex flex-row justify-content-center align-content-center animated" [ngClass]="{'fadeIn': isTypeSelect && typeInput !== undefined }">
     <mat-form-field *ngSwitchCase="true" [style.fontSize]="'20px'" class="w-100 text-center d-flex flex-column" (keyup.enter)="login()">
-        <mat-label>{{'label' | traslate}}</mat-label>
-        <input matInput #loginInput [formControl]="loginFormControl" class="w-95" [maxLength]="10" [errorStateMatcher]="matcher">
+        <mat-label>{{'loginlabel' | traslate}}</mat-label>
+        <input matInput #loginInput [formControl]="loginFormControl" class="w-95" [maxLength]="10" [errorStateMatcher]="matcher" />
         <mat-icon *ngIf="isvalidating">
             <i class="fas fa-spinner fa-spin"></i>
         </mat-icon>
@@ -21,7 +21,7 @@
 
     <mat-form-field *ngSwitchCase="false" [style.fontSize]="'20px'" class="w-100 text-center" (keyup.enter)="register()">
         <mat-label>{{'registerLabel' | traslate}}</mat-label>
-        <input matInput #registerInput [maxLength]="10" class="w-95" [formControl]="registerFormControl" [errorStateMatcher]="matcher">
+        <input matInput #registerInput [maxLength]="10" class="w-95" [formControl]="registerFormControl" [errorStateMatcher]="matcher" />
         <mat-icon *ngIf="isvalidating">
             <i class="fas fa-spinner fa-spin"></i>
         </mat-icon>

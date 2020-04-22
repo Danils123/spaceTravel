@@ -12,6 +12,7 @@ declare let particlesJS: any;
 	styleUrls: ['./homepage.component.css'],
 })
 export class HomepageComponent implements OnInit {
+	public isAsteriusInvoking: boolean;
 	public particles = particles;
 	public secundaryTitleClases: string[] = [];
 	public titleClases: string[] = [];
@@ -23,9 +24,9 @@ export class HomepageComponent implements OnInit {
 	constructor(public db: AngularFirestore, public plService: PreLoadingService, public us: UsersService) {}
 
 	ngOnInit() {
-		particlesJS.load('particles-js', 'assets/json/particlesjs-config.json', () => {
-			console.log('callback - particles-js config loaded');
-		});
+		// particlesJS.load('particles-js', 'assets/json/particlesjs-config.json', () => {
+		// 	console.log('callback - particles-js config loaded');
+		// });
 
 		this.plService.getObservable().subscribe(resp => {
 			this.isPreloadingFinish = resp;
@@ -63,7 +64,9 @@ export class HomepageComponent implements OnInit {
 
 	callAsterious() {
 		this.titleClases = ['heartBeat '];
+		this.isAsteriusInvoking = true;
 		this.us.invokeAsterius().subscribe(resp => {
+			this.isAsteriusInvoking = false;
 			console.log(resp);
 		});
 	}

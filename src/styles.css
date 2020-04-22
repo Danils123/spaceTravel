@@ -13,14 +13,6 @@ body {
     --color-share: red;
 }
 
-.alreadyAsteriuosInvoked {
-    --image-background: url("./assets/images/sky.mp4");
-}
-
-.notAsteriuosInvoked {
-    --image-background: url("./assets/images/sky.png");
-}
-
 
 /* Animate css */
 

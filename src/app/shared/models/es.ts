@@ -2,6 +2,7 @@ import { ILanguage } from './Translation';
 export const es: ILanguage = {
 	welcome: 'Bienvenidos a',
 	clicSubtitle: 'Dale clic a asterius para que podamos pedir un deseo',
+	isAsteriusInvoking: 'Asterious esta siendo invocado, esperemos a que conteste',
 	asteriusInvoked: 'Asterious ha sido invocado, pidamos nuestro deseo',
 	content: 'Contenido en proceso',
 	login: 'Iniciar sesión',

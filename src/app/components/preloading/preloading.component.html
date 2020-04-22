@@ -1,8 +1,8 @@
 <div id="contenedor" [class]="pageClases.join(' ')" [hidden]="isHide">
-    <app-langs class="lang"></app-langs>
+    <app-langs [class]="'lang animated ' + lanClases.join(' ')"></app-langs>
     <div id="background">
         <div [class]="containerClases + ' d-flex flex-column align-content-center w-100 h-90'">
-            <div [class]="'animated align-self-center h-100 w-100 position-relative ' + imageClases.join(' ')" id="logo">
+            <div [class]="'animated h-100 w-100 d-flex align-items-center justify-content-center position-relative ' + imageClases.join(' ')" id="logo">
                 <img src="assets/images/circle.png" class="img-fluid logoImg" alt="Responsive image" />
                 <img src="assets/images/rocketLogo.png" class="img-fluid logoImg" alt="Responsive image" />
             </div>

@@ -54,10 +54,12 @@
 
 #layer_0 {
     cursor: pointer;
+    background-image: url("../../../assets/images/skyWeb.png");
     background-color: #060126;
-    background-size: 112.2%;
-    width: 100%;
-    background-image: url("../../../assets/images/sky.png")
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 #layer_1 {
@@ -68,10 +70,6 @@
 }
 
 #layer_3 {
-    /* background-color: rgba(78, 81, 141, 0.83);
-    width: 95%;
-    height: 45rem; */
-    /*z-index: -4; */
     background-image: url("../../../assets/images/mountainsB_1.png");
     height: 50rem;
 }
@@ -102,6 +100,10 @@
 }
 
 @media only screen and (max-device-width: 414px) {
+    .text-invoked {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
     #titleLogo {
         font-size: 3rem;
         color: #e2b632;
@@ -129,14 +131,15 @@
         background-position: -446px 0rem;
     } */
     #layer_0 {
+        background-image: url("../../../assets/images/skyMobil.png");
         background-color: #060126;
-        background-size: 394.2%;
-        width: 100%;
-        background-image: url("../../../assets/images/sky.png");
-        background-position: -446px 0rem;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
     }
     #logo {
-        margin-top: 15rem;
+        margin-top: 16rem;
     }
     #skyVideo {
         width: 89rem;
