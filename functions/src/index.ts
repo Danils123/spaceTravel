@@ -37,8 +37,8 @@ app.get("/getUsers", async (request: functions.Request, response: functions.Resp
 app.get("/getUser", async (request: functions.Request, response: functions.Response) => {
 	const usersRef = db.collection("users");
 	const docSnap = await usersRef.get();
-	const users = docSnap.docs.map(user => ({ id: user.id, name: user.get("name") })).filter(x => (x.name = request.query.name.toString()));
-	response.json(users.length > 0 ? users[0] : null);
+	const userResp = docSnap.docs.map(user => ({ id: user.id, name: user.get("name") }));
+	response.json(userResp.find(x => x.name === request.query.name));
 });
 
 app.delete("/deleteUser/:id", async (request: functions.Request, response: functions.Response) => {
@@ -92,7 +92,7 @@ app.delete("/deleteMessages", async (request: functions.Request, response: funct
 	const messagesRef = db.collection("messages");
 	const countMessagesSnap = await constantsRef.doc("countMessages").get();
 	let countMessages: number = countMessagesSnap.get("value") ? 0 : countMessagesSnap.get("value");
-	while (countMessages != 0) {
+	while (countMessages !== 0) {
 		await messagesRef.doc(countMessages.toString()).delete();
 		countMessages -= 1;
 	}

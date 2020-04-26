@@ -28,6 +28,7 @@ export class UserValidateService {
 		try {
 			const user = await this.http.get<User>(`${environment.url}/api/getUser?name=${control.value}`).toPromise();
 			this.us.setUser(user);
+			console.log(user);
 			return {
 				userValid: user != undefined,
 			};
