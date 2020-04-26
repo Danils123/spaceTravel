@@ -3,6 +3,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { PreLoadingService } from '../preloading/preLoading.service';
 import { UsersService } from '../../shared/services/users.service';
 import { particles } from '../../shared/models/particles';
+import { MessagesService } from '../../shared/services/messages.service';
 
 declare let particlesJS: any;
 
@@ -20,14 +21,11 @@ export class HomepageComponent implements OnInit {
 	public isAsteriousInvoked: boolean;
 	public isAnimationsOff = false;
 	public isPreloadingFinish: boolean;
+	private flareExample;
 	@ViewChild('background', { static: true }) background: ElementRef;
-	constructor(public db: AngularFirestore, public plService: PreLoadingService, public us: UsersService) {}
+	constructor(public db: AngularFirestore, public plService: PreLoadingService, public us: UsersService, public ms: MessagesService) {}
 
 	ngOnInit() {
-		// particlesJS.load('particles-js', 'assets/json/particlesjs-config.json', () => {
-		// 	console.log('callback - particles-js config loaded');
-		// });
-
 		this.plService.getObservable().subscribe(resp => {
 			this.isPreloadingFinish = resp;
 			this.subTitleClases = ['fadeInDown ', 'slow '];
@@ -55,6 +53,7 @@ export class HomepageComponent implements OnInit {
 
 						if (!this.isAsteriousInvoked) {
 							this.titleClases = [' '];
+							this.ms.setDelete();
 						}
 						// tslint:disable-next-line:no-string-literal
 						this.isAsteriousInvoked = resp['value'];

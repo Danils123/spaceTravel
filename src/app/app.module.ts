@@ -28,9 +28,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './components/footer/footer.component';
 import { TraslatePipe } from './shared/pipes/traslate.pipe';
 import { LangsComponent } from './components/langs/langs.component';
+import { ChatComponent } from './components/chat/chat.component';
 
 @NgModule({
-	declarations: [AppComponent, PreloadingComponent, HomepageComponent, NavComponent, LoginComponent, AutofocusDirective, FooterComponent, TraslatePipe, LangsComponent],
+	declarations: [AppComponent, PreloadingComponent, HomepageComponent, NavComponent, LoginComponent, AutofocusDirective, FooterComponent, TraslatePipe, LangsComponent, ChatComponent],
 	imports: [
 		ReactiveFormsModule,
 		FormsModule,

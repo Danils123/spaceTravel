@@ -134,7 +134,7 @@ p {
     animation-name: fadeOutCustom;
 }
 
-@media only screen and (max-device-width: 414px) {
+@media only screen and (max-device-width: 414px) and (min-height: 432px) {
     .logoImg {
         max-width: 15rem;
         position: absolute;
@@ -148,5 +148,33 @@ p {
     }
     #buttons {
         margin-bottom: 7rem !important;
+    }
+}
+
+@media screen and (max-width: 414px) and (max-height: 431px) {
+    .logoImg {
+        max-width: 10rem;
+        position: absolute;
+    }
+    .lang {
+        background-color: white;
+        float: right;
+        margin-right: -1rem !important;
+        margin-top: 0.5rem !important;
+    }
+    #buttons {
+        padding: 2rem;
+        margin-bottom: 2rem !important;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-width: 414px) {
+    .logoImg {
+        max-width: 13rem;
+        position: absolute;
+        margin-top: -2rem;
+    }
+    #buttons {
+        margin-bottom: 5rem;
     }
 }

@@ -41,6 +41,7 @@ export class LoginComponent implements OnInit {
 		setTimeout(() => {
 			if (sessionStorage.getItem('user')) {
 				this.response.emit(JSON.parse(sessionStorage.getItem('user')).name);
+				this.us.setUser(JSON.parse(sessionStorage.getItem('user')));
 			}
 		}, 1000);
 	}
@@ -57,7 +58,7 @@ export class LoginComponent implements OnInit {
 			this.isvalidating = true;
 			this.isUserExist = (await this.uvs.existUser(this.loginFormControl)).userValid;
 			if (this.isUserExist) {
-				sessionStorage.setItem('user', JSON.stringify({ name: this.loginFormControl.value }));
+				sessionStorage.setItem('user', JSON.stringify(this.us.getUser()));
 				this.response.emit(this.loginFormControl.value);
 			} else {
 				this.loginFormControl.setErrors({ incorrect: true });

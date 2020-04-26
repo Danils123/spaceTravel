@@ -123,13 +123,6 @@
         bottom: 2.7rem;
         left: -28rem;
     }
-    /* #layer_1 {
-        background-color: #060126;
-        background-size: 394.2%;
-        width: 100%;
-        background-image: var(--image-background);
-        background-position: -446px 0rem;
-    } */
     #layer_0 {
         background-image: url("../../../assets/images/skyMobil.png");
         background-color: #060126;
@@ -143,5 +136,14 @@
     }
     #skyVideo {
         width: 89rem;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-device-width: 414px) {
+    .layerImage {
+        background-size: 76rem;
+    }
+    #logo {
+        margin-top: 9rem;
     }
 }

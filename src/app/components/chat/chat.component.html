@@ -1,0 +1,19 @@
+<div class="bg-white container">
+    <div class="row w-100">
+        <div class="col">
+            <mat-form-field class="w-100">
+                <mat-label>Ingreso de deseos</mat-label>
+                <input (keyup.enter)="sendMessage()" matInput [formControl]="messageFormControl" placeholder="Puedes escribir cualquier tipo de deseo" />
+            </mat-form-field>
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+            <button mat-icon-button color="warn" [disabled]="!messageFormControl.value" (click)="sendMessage()">
+				<mat-icon>
+					<i class="fa fa-paper-plane fa-2x"></i>
+				</mat-icon>
+			</button>
+        </div>
+    </div>
+
+    <p *ngFor="let message of messages">{{message.userName}}: {{message.message}}</p>
+</div>
